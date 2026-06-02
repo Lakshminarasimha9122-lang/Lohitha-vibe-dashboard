@@ -158,22 +158,24 @@
 
     </div>
 
-    <!-- 🐱 REALS-ONLY YAPAPA CAT VIDEO MODAL OVERLAY 🐱 -->
-    <div id="catModal" class="fixed inset-0 bg-black/90 hidden items-center justify-center z-[100] p-4 transition-all duration-300">
+    <!-- 🐱 BULLETPROOF YAPAPA CAT VIDEO MODAL OVERLAY 🐱 -->
+    <div id="catModal" class="fixed inset-0 bg-black/95 hidden items-center justify-center z-[100] p-4 transition-all duration-300">
         <div class="bg-slate-900 border-2 border-orange-500 max-w-sm w-full rounded-3xl p-6 shadow-2xl flex flex-col items-center relative">
             <button onclick="closeCat()" class="absolute -top-3 -right-3 bg-red-600 hover:bg-red-700 text-white font-black w-8 h-8 rounded-full shadow-lg flex items-center justify-center cursor-pointer text-sm">✕</button>
             
-            <h3 class="text-xl font-black text-orange-400 tracking-tight text-center mb-4">🛡️ Anxiety Shield: Yapapa Cat Activated</h3>
+            <h3 class="text-xl font-black text-orange-400 tracking-tight text-center mb-4">🛡️ Anxiety Shield Activated</h3>
             
-            <!-- Native Embedded Video Player Asset Frame -->
+            <!-- Added play controls and explicitly unmuted template attributes -->
             <div class="w-64 aspect-[9/16] bg-slate-950 rounded-2xl border border-slate-800 overflow-hidden shadow-2xl relative">
-                <video id="yapapaVideo" class="w-full h-full object-cover" loop controls>
+                <video id="yapapaVideo" class="w-full h-full object-cover" loop controls playsinline preload="auto">
                     <source src="vidssave.com The Original 'Yapapa Ummm, Yapapa Haane’ New cat meme unlocked! 1080p.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
             
-            <p class="text-xs text-slate-500 text-center mt-3 font-medium">Turn up the volume slider to hear the vibe snippet out loud!</p>
+            <p class="text-xs text-slate-400 text-center mt-4 font-semibold px-2">
+                If the video doesn't play automatically, click the play button or view it directly <a id="backupLink" href="#" target="_blank" class="text-orange-400 underline hover:text-orange-300">here</a>!
+            </p>
         </div>
     </div>
 
@@ -242,6 +244,9 @@
 
         showSlide();
 
+        // Dynamically configure back-up path links based on the user's domain space variables
+        document.getElementById("backupLink").href = window.location.href.replace('index.html', '') + "vidssave.com%20The%20Original%20'Yapapa%20Ummm,%20Yapapa%20Haane%E2%80%99%20New%20cat%20meme%20unlocked!%201080p.mp4";
+
         function chaosMode() {
             document.body.classList.toggle("chaos");
             document.getElementById("title").classList.toggle("spin");
@@ -265,7 +270,6 @@
             flashBanner("🔮 Anxiety Processor State: " + moods[Math.floor(Math.random() * moods.length)], "text-red-400");
         }
 
-        /* Video Automation Engine Call Triggers */
         function summonCat() {
             const modal = document.getElementById("catModal");
             const video = document.getElementById("yapapaVideo");
@@ -273,11 +277,16 @@
             modal.classList.remove("hidden");
             modal.classList.add("flex");
             
-            // Auto playback target initializations
             video.currentTime = 0;
-            video.play().catch(e => {
-                console.log("Autoplay blocker tripped, waiting for user interactions.");
-            });
+            // Force manual video unmuting controls to pull down standard desktop sandbox locks
+            video.muted = false; 
+            
+            let playPromise = video.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(error => {
+                    console.log("Playback failed initially, showing native control prompts.");
+                });
+            }
         }
 
         function closeCat() {
