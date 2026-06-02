@@ -19,9 +19,9 @@
         }
     </style>
 </head>
-<body id="body" class="bg-slate-900 text-slate-100 min-h-screen flex flex-col items-center justify-center p-6 font-sans transition-all duration-300">
+<body id="body" class="bg-slate-900 text-slate-100 min-h-screen flex flex-col items-center justify-start p-6 font-sans transition-all duration-300">
 
-    <div class="w-full max-w-2xl flex justify-between mb-8 gap-4">
+    <div class="w-full max-w-4xl flex justify-between mb-8 gap-4 mt-4">
         <button onclick="toggleChaos()" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full shadow-lg transform active:scale-95 transition cursor-pointer">
             🚨 Activate Chaos Mode
         </button>
@@ -30,7 +30,7 @@
         </button>
     </div>
 
-    <main id="mainCard" class="w-full max-w-2xl bg-slate-800 border border-slate-700 rounded-2xl p-8 shadow-2xl relative overflow-hidden transition-all duration-300">
+    <main id="mainCard" class="w-full max-w-4xl bg-slate-800 border border-slate-700 rounded-2xl p-8 shadow-2xl relative overflow-hidden transition-all duration-300 mb-8">
         <div id="coolGlasses" class="hidden absolute top-12 left-1/2 -translate-x-1/2 text-7xl z-50 pointer-events-none drop-shadow-md">
             🕶️
         </div>
@@ -40,6 +40,36 @@
         </h1>
         <p class="text-slate-400 text-center text-sm mb-8">Extremely critical, real-time analytics on Lohitha's chaotic energy.</p>
 
+        <!-- Dynamic Photo Grid Section -->
+        <h2 class="text-lg font-bold text-slate-300 mb-4 border-b border-slate-700 pb-2">📸 Recorded Vibe Snippets</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            <div class="overflow-hidden rounded-xl bg-slate-700 aspect-square border border-slate-600 shadow-md transform hover:scale-105 transition duration-300">
+                <img src="6ac983fb-89c7-485e-8da8-7c1a26d6a01a.jpg" alt="Vibe 1" class="w-full h-full object-cover">
+            </div>
+            <div class="overflow-hidden rounded-xl bg-slate-700 aspect-square border border-slate-600 shadow-md transform hover:scale-105 transition duration-300">
+                <img src="2b4cb790-92a8-4fc4-9def-09c05ab4b9b8.jpg" alt="Vibe 2" class="w-full h-full object-cover">
+            </div>
+            <div class="overflow-hidden rounded-xl bg-slate-700 aspect-square border border-slate-600 shadow-md transform hover:scale-105 transition duration-300">
+                <img src="67cd165b-8bd8-43e4-a4cc-b9a3c3958a0b.jpg" alt="Vibe 3" class="w-full h-full object-cover">
+            </div>
+            <div class="overflow-hidden rounded-xl bg-slate-700 aspect-square border border-slate-600 shadow-md transform hover:scale-105 transition duration-300">
+                <img src="0eee80a5-0865-48f2-8ec7-faa523db5622.jpg" alt="Vibe 4" class="w-full h-full object-cover">
+            </div>
+            <div class="overflow-hidden rounded-xl bg-slate-700 aspect-square border border-slate-600 shadow-md transform hover:scale-105 transition duration-300">
+                <img src="d42034cd-e556-4367-bc8e-852894ee885f.jpg" alt="Vibe 5" class="w-full h-full object-cover">
+            </div>
+            <div class="overflow-hidden rounded-xl bg-slate-700 aspect-square border border-slate-600 shadow-md transform hover:scale-105 transition duration-300">
+                <img src="7e74a0c9-9435-4583-901b-fdd1eb12f117.jpg" alt="Vibe 6" class="w-full h-full object-cover">
+            </div>
+            <div class="overflow-hidden rounded-xl bg-slate-700 aspect-square border border-slate-600 shadow-md transform hover:scale-105 transition duration-300">
+                <img src="576235ba-0b25-4a20-95e9-bf2db1c3ff96.jpg" alt="Vibe 7" class="w-full h-full object-cover">
+            </div>
+            <div class="overflow-hidden rounded-xl bg-slate-700 aspect-square border border-slate-600 shadow-md transform hover:scale-105 transition duration-300">
+                <img src="e4c0cb90-958f-4377-81f3-9c0687eeaa6e.jpg" alt="Vibe 8" class="w-full h-full object-cover">
+            </div>
+        </div>
+
+        <!-- Metrics Display Grid -->
         <div class="grid grid-cols-2 gap-4 mb-8">
             <div class="bg-slate-800/50 border border-slate-700 p-4 rounded-xl text-center">
                 <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Bubble Tea Consumed</span>
@@ -61,7 +91,7 @@
 
         <div class="flex flex-col items-center justify-center min-h-[100px] relative mt-4">
             <p class="text-xs text-slate-500 mb-2">Click below to give Lohitha a normal compliment:</p>
-            <button id="runawayBtn" class="absolute bg-gradient-to-r from-amber-500 to-orange-600 text-white font-extrabold py-3 px-6 rounded-xl shadow-lg cursor-pointer transition-all duration-100 ease-out whitespace-nowrap">
+            <button id="runawayBtn" class="absolute bg-gradient-to-r from-amber-500 to-orange-600 text-white font-extrabold py-3 px-6 rounded-xl shadow-lg cursor-pointer transition-all duration-100 ease-out whitespace-nowrap z-40">
                 Click to Compliment 🏆
             </button>
         </div>
@@ -91,7 +121,7 @@
             const maxY = card.clientHeight - btn.clientHeight - padding;
             
             const randomX = Math.max(padding, Math.floor(Math.random() * maxX)) - (card.clientWidth / 2) + (btn.clientWidth / 2);
-            const randomY = Math.max(padding, Math.floor(Math.random() * maxY)) - (card.clientHeight / 3);
+            const randomY = Math.max(padding, Math.floor(Math.random() * maxY)) - (card.clientHeight / 4);
 
             btn.style.transform = `translate(${randomX}px, ${randomY}px)`;
             btn.innerText = "Lohitha said NO! 🏃‍♂️";
