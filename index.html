@@ -28,7 +28,7 @@
 
     <div class="max-w-5xl mx-auto">
 
-        <h1 id="title" class="text-5xl font-black text-center mb-6 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400">
+        <h1 id="title" class="text-5xl font-black text-center mb-6 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-orange-400 via-red-400 to-amber-500">
             👑 Lohitha Supremacy Dashboard 👑
         </h1>
 
@@ -36,26 +36,26 @@
             <button onclick="chaosMode()" class="bg-red-600 hover:bg-red-700 text-white font-bold px-5 py-2.5 rounded-xl shadow-lg active:scale-95 transition cursor-pointer">
                 🚨 Chaos Mode
             </button>
-            <button onclick="coolMode()" class="bg-purple-600 hover:bg-purple-700 text-white font-bold px-5 py-2.5 rounded-xl shadow-lg active:scale-95 transition cursor-pointer">
-                😎 Cool Mode
+            <button onclick="coolMode()" class="bg-amber-600 hover:bg-amber-700 text-white font-bold px-5 py-2.5 rounded-xl shadow-lg active:scale-95 transition cursor-pointer">
+                ☕ Coffee Boost
             </button>
             <button onclick="scanMood()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-5 py-2.5 rounded-xl shadow-lg active:scale-95 transition cursor-pointer">
-                🧠 Mood Scan
+                🧠 Overthink Scan
             </button>
             <button onclick="summonCat()" class="bg-green-600 hover:bg-green-700 text-white font-bold px-5 py-2.5 rounded-xl shadow-lg active:scale-95 transition cursor-pointer">
-                🐱 Summon Cat
+                🐱 Summon Anxiety Shield
             </button>
         </div>
 
-        <div id="statusBanner" class="hidden bg-slate-900 border border-slate-800 text-center text-lg font-bold p-4 rounded-2xl mb-8 animate-pulse text-purple-400"></div>
+        <div id="statusBanner" class="hidden bg-slate-900 border border-slate-800 text-center text-lg font-bold p-4 rounded-2xl mb-8 animate-pulse text-orange-400"></div>
 
         <div class="bg-slate-900 rounded-3xl p-6 shadow-2xl border border-slate-800 relative">
             <div class="text-center">
-                <div class="w-80 h-80 mx-auto rounded-3xl border-4 border-purple-500 overflow-hidden shadow-2xl bg-slate-950 relative">
+                <div class="w-80 h-80 mx-auto rounded-3xl border-4 border-orange-500 overflow-hidden shadow-2xl bg-slate-950 relative">
                     <img id="photo" src="6ac983fb-89c7-485e-8da8-7c1a26d6a01a.jpg" class="w-full h-full object-cover transition-all duration-300">
                 </div>
-                <h2 id="caption" class="text-2xl font-black mt-5 tracking-tight text-pink-400">
-                    🔥 Current Vibe: Elite Configuration
+                <h2 id="caption" class="text-2xl font-black mt-5 tracking-tight text-orange-400">
+                    🎯 Current Vibe State: Elite Configuration
                 </h2>
             </div>
             <div class="flex justify-center gap-4 mt-6">
@@ -70,88 +70,87 @@
 
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
             <div class="bg-slate-900 border border-slate-800/60 p-4 rounded-xl text-center shadow-lg">
-                <h3 class="text-xs font-bold uppercase text-slate-500 tracking-wider">🧋 Bubble Tea</h3>
-                <p class="text-2xl font-black text-pink-400 mt-1">999L</p>
+                <h3 class="text-xs font-bold uppercase text-slate-500 tracking-wider">🍛 Biryani &amp; Tomato Bajji</h3>
+                <p class="text-2xl font-black text-orange-400 mt-1">Unlimited</p>
             </div>
             <div class="bg-slate-900 border border-slate-800/60 p-4 rounded-xl text-center shadow-lg">
-                <h3 class="text-xs font-bold uppercase text-slate-500 tracking-wider">💅 Attitude</h3>
-                <p class="text-2xl font-black text-cyan-400 mt-1">∞</p>
+                <h3 class="text-xs font-bold uppercase text-slate-500 tracking-wider">☕ Coffee Level</h3>
+                <p class="text-2xl font-black text-amber-500 mt-1">Normal &amp; Strong</p>
             </div>
             <div class="bg-slate-900 border border-slate-800/60 p-4 rounded-xl text-center shadow-lg">
-                <h3 class="text-xs font-bold uppercase text-slate-500 tracking-wider">😂 Laughs Sent</h3>
-                <p class="text-2xl font-black text-yellow-400 mt-1">8642</p>
+                <h3 class="text-xs font-bold uppercase text-slate-500 tracking-wider">🧠 Overthinking Tabs Open</h3>
+                <p class="text-2xl font-black text-red-400 mt-1">48,291</p>
             </div>
             <div class="bg-slate-900 border border-slate-800/60 p-4 rounded-xl text-center shadow-lg">
-                <h3 class="text-xs font-bold uppercase text-slate-500 tracking-wider">🔥 Drama Rating</h3>
-                <p class="text-2xl font-black text-red-400 mt-1">99%</p>
+                <h3 class="text-xs font-bold uppercase text-slate-500 tracking-wider">🫣 Social Anxiety</h3>
+                <p class="text-2xl font-black text-cyan-400 mt-1">100% Introvert</p>
             </div>
         </div>
 
         <div class="grid md:grid-cols-2 gap-6 mt-8">
             <div class="bg-slate-900 border border-slate-800 p-6 rounded-3xl shadow-xl flex flex-col justify-between">
                 <div>
-                    <h2 class="text-2xl font-black mb-2 flex items-center gap-2 text-pink-400">🤖 AI Bestie Analyzer</h2>
-                    <p id="analysis" class="text-lg text-slate-300 min-h-[40px] flex items-center">Waiting for analysis initialization...</p>
+                    <h2 class="text-2xl font-black mb-2 flex items-center gap-2 text-red-400">🤖 AP Junk Food Radar</h2>
+                    <p id="analysis" class="text-lg text-slate-300 min-h-[40px] flex items-center">Waiting for meal logs...</p>
                 </div>
-                <button onclick="analyze()" class="bg-pink-600 hover:bg-pink-700 font-bold px-4 py-2.5 rounded-xl mt-4 active:scale-95 transition cursor-pointer w-full text-center">Analyze Lohitha</button>
+                <button onclick="analyze()" class="bg-orange-600 hover:bg-orange-700 font-bold px-4 py-2.5 rounded-xl mt-4 active:scale-95 transition cursor-pointer w-full text-center">Scan Kitchen Orders</button>
             </div>
 
             <div class="bg-slate-900 border border-slate-800 p-6 rounded-3xl shadow-xl flex flex-col justify-between">
                 <div>
-                    <h2 class="text-2xl font-black mb-2 flex items-center gap-2 text-yellow-400">🎰 Chaos Slot Machine</h2>
+                    <h2 class="text-2xl font-black mb-2 flex items-center gap-2 text-amber-400">🎰 Brain Slot Machine</h2>
                     <p id="slot" class="text-4xl font-extrabold text-center py-2 tracking-widest">🎲 🎲 🎲</p>
                 </div>
-                <button onclick="spin()" class="bg-yellow-600 hover:bg-yellow-700 font-bold px-4 py-2.5 rounded-xl mt-4 active:scale-95 transition cursor-pointer w-full text-center">SPIN CORE</button>
+                <button onclick="spin()" class="bg-amber-600 hover:bg-amber-700 font-bold px-4 py-2.5 rounded-xl mt-4 active:scale-95 transition cursor-pointer w-full text-center">Spin Brain Cells</button>
             </div>
 
             <div class="bg-slate-900 border border-slate-800 p-6 rounded-3xl shadow-xl flex flex-col justify-between">
                 <div>
-                    <h2 class="text-2xl font-black mb-4 text-orange-400">🎤 Excuse Generator</h2>
-                    <p id="excuseBox" class="text-lg text-slate-300 min-h-[40px] flex items-center">Ready to avoid responsibilities...</p>
+                    <h2 class="text-2xl font-black mb-4 text-rose-400">🎤 What Is She Thinking About Right Now?</h2>
+                    <p id="excuseBox" class="text-lg text-slate-300 min-h-[40px] flex items-center">Analyzing scenarios from 2019...</p>
                 </div>
-                <button onclick="excuse()" class="bg-orange-600 hover:bg-orange-700 font-bold px-4 py-2.5 rounded-xl active:scale-95 transition cursor-pointer w-full text-center">Generate Excuse</button>
+                <button onclick="excuse()" class="bg-rose-600 hover:bg-rose-700 font-bold px-4 py-2.5 rounded-xl active:scale-95 transition cursor-pointer w-full text-center">Analyze Thoughts</button>
             </div>
 
             <div class="bg-slate-900 border border-slate-800 p-6 rounded-3xl shadow-xl flex flex-col justify-between">
                 <div>
-                    <h2 class="text-2xl font-black mb-4 text-green-400">🍕 Hunger Detector</h2>
-                    <p id="hungerBox" class="text-lg text-slate-300 min-h-[40px] flex items-center">System checking biometric caloric levels...</p>
+                    <h2 class="text-2xl font-black mb-4 text-cyan-400">🫣 Social Battery Gauge</h2>
+                    <p id="hungerBox" class="text-lg text-slate-300 min-h-[40px] flex items-center">Checking tolerance for human interaction...</p>
                 </div>
-                <button onclick="hunger()" class="bg-green-600 hover:bg-green-700 font-bold px-4 py-2.5 rounded-xl active:scale-95 transition cursor-pointer w-full text-center">Check Hunger</button>
+                <button onclick="hunger()" class="bg-cyan-600 hover:bg-cyan-700 font-bold px-4 py-2.5 rounded-xl active:scale-95 transition cursor-pointer w-full text-center">Check Battery Level</button>
             </div>
         </div>
 
         <div class="bg-slate-900 border border-slate-800 mt-8 p-6 rounded-3xl shadow-xl">
-            <h2 class="text-2xl font-black mb-4 tracking-tight text-cyan-400">🏆 Official Certificates Log</h2>
+            <h2 class="text-2xl font-black mb-4 tracking-tight text-yellow-400">🏆 Verified Badges Log</h2>
             <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-300 font-medium">
-                <li class="bg-slate-950/40 p-3 rounded-xl border border-slate-800/80">🏅 CEO of Random Chaos</li>
-                <li class="bg-slate-950/40 p-3 rounded-xl border border-slate-800/80">🏅 Certified Drama Survivor</li>
-                <li class="bg-slate-950/40 p-3 rounded-xl border border-slate-800/80">🏅 Professional Overthinker</li>
-                <li class="bg-slate-950/40 p-3 rounded-xl border border-slate-800/80">🏅 Bubble Tea Ambassador</li>
-                <li class="bg-slate-950/40 p-3 rounded-xl border border-slate-800/80">🏅 Queen of Vibes</li>
-                <li class="bg-slate-950/40 p-3 rounded-xl border border-slate-800/80">🏅 Master of Sending "😂😂😂😂"</li>
+                <li class="bg-slate-950/40 p-3 rounded-xl border border-slate-800/80">🏅 Tomato Bajji Connoisseur</li>
+                <li class="bg-slate-950/40 p-3 rounded-xl border border-slate-800/80">🏅 Bubble Tea Rejector (Pure Filter Coffee Team)</li>
+                <li class="bg-slate-950/40 p-3 rounded-xl border border-slate-800/80">🏅 Professional Scenario Creator</li>
+                <li class="bg-slate-950/40 p-3 rounded-xl border border-slate-800/80">🏅 "Will Stay Home" Specialist</li>
+                <li class="bg-slate-950/40 p-3 rounded-xl border border-slate-800/80">🏅 S-Tier Biryani Evaluator</li>
+                <li class="bg-slate-950/40 p-3 rounded-xl border border-slate-800/80">🏅 Master of Reading Texts and Replying After 3 Business Days</li>
             </ul>
         </div>
 
         <div id="complimentZone" class="bg-slate-900 border border-slate-800 mt-8 p-6 rounded-3xl shadow-xl h-44 relative overflow-hidden">
-            <h2 class="text-2xl font-black text-pink-500">🏃 Compliment Engine</h2>
-            <p class="text-xs text-slate-500 mt-0.5 mb-4">Try clicking it if your reaction time is quick enough...</p>
-            <button id="runBtn" class="absolute bg-gradient-to-r from-pink-500 to-rose-600 font-extrabold text-white px-5 py-2.5 rounded-xl shadow-lg transition-all duration-100 ease-out whitespace-nowrap cursor-pointer z-20" style="left: 24px; bottom: 24px;">
-                Click To Compliment 🏆
+            <h2 class="text-2xl font-black text-orange-400">🏃 Safe Escape Compliment Button</h2>
+            <p class="text-xs text-slate-500 mt-0.5 mb-4">No eye contact required. Completely introvert friendly.</p>
+            <button id="runBtn" class="absolute bg-gradient-to-r from-orange-500 to-red-600 font-extrabold text-white px-5 py-2.5 rounded-xl shadow-lg transition-all duration-100 ease-out whitespace-nowrap cursor-pointer z-20" style="left: 24px; bottom: 24px;">
+                Click to Compliment safely 🏆
             </button>
         </div>
 
         <div class="bg-slate-900 border border-slate-950 mt-8 p-6 rounded-3xl text-center shadow-xl mb-12">
-            <h2 class="text-xl font-bold mb-3 text-red-500/80">⚠️ Critical Override Core Terminal</h2>
+            <h2 class="text-xl font-bold mb-3 text-red-500/80">⚠️ Panic Button</h2>
             <button onclick="destroy()" class="bg-red-950 text-red-400 hover:bg-red-900 border border-red-800/60 font-black px-6 py-3 rounded-xl tracking-wider active:scale-95 transition cursor-pointer">
-                💣 DO NOT CLICK SYSTEM OVERRIDE
+                💣 LEAVE ME ALONE SEQUENCE
             </button>
         </div>
 
     </div>
 
     <script>
-        // Configured Arrays Mapping to Your Repository File Directives
         const images = [
             "6ac983fb-89c7-485e-8da8-7c1a26d6a01a.jpg",
             "2b4cb790-92a8-4fc4-9def-09c05ab4b9b8.jpg",
@@ -165,13 +164,13 @@
 
         const captions = [
             "🎯 Current Vibe State: Elite Configuration",
-            "🔥 Current Vibe State: Attitude Setting Maxed Out",
-            "⚡ Current Vibe State: Unmatched Sassy Radiance",
-            "🧋 Current Vibe State: Post-Bubble Tea Energy Boost",
-            "🔮 Current Vibe State: Mystical Main Character Energy",
-            "🎭 Current Vibe State: Pure Unfiltered Chaos Mode",
-            "👑 Current Vibe State: Royal Highness Levels",
-            "🌟 Current Vibe State: Definitive Lohitha Supremacy"
+            "🔥 Current Vibe State: Tomato Bajji Level Critical",
+            "⚡ Current Vibe State: Formulating 14 Fake Scenarios",
+            "☕ Current Vibe State: Normal Coffee Infusion Complete",
+            "🔮 Current Vibe State: Intensely Tracking Who Is Looking At Her",
+            "🎭 Current Vibe State: High Spicy Biryani Consumption",
+            "👑 Current Vibe State: Social Battery At 4%",
+            "🌟 Current Vibe State: Ultimate AP Local Mode Activated"
         ];
 
         let current = 0;
@@ -214,7 +213,6 @@
             showSlide();
         }
 
-        // Keep showSlide running on initial load to fetch the first image file
         showSlide();
 
         function chaosMode() {
@@ -225,41 +223,41 @@
 
         function coolMode() {
             playAudioTone(580, 0.2);
-            flashBanner("😎 Coolness matrix expanded by 1000% across all sectors!", "text-purple-400");
+            flashBanner("☕ Fresh traditional coffee brewed. Brain cells momentarily rebooted!", "text-amber-400");
         }
 
         function scanMood() {
             playAudioTone(440, 0.15);
             const moods = [
-                "👑 Queen Mode",
-                "😴 Sleepy Mode",
-                "🧋 Needs Bubble Tea Urgently",
-                "🔥 Actively Causing Structural Chaos",
-                "😂 Laughing At Text Messages From 3 Hours Ago"
+                "💭 Thinking about a conversation from 2017",
+                "🤫 Planning how to slip out of the function early",
+                "🍛 Processing heavy local spices",
+                "❌ Actively despising the concept of bubble tea",
+                "📲 Typing a reply but discarding it immediately"
             ];
-            flashBanner("🔮 Scanned Current Status: " + moods[Math.floor(Math.random() * moods.length)], "text-blue-400");
+            flashBanner("🔮 Anxiety Processor State: " + moods[Math.floor(Math.random() * moods.length)], "text-red-400");
         }
 
         function summonCat() {
             playAudioTone(680, 0.1);
-            flashBanner("🐱 Strategic Emergency Support Cat Unit Arrived!", "text-green-400");
+            flashBanner("🛡️ Anti-Social Bubble Deployed. Nobody can look at her for the next 60 minutes!", "text-cyan-400");
         }
 
         function analyze() {
             playAudioTone(490, 0.08);
             const results = [
-                "Certified Strategic Goofball",
-                "Vibe Chaos Levels: Critical Defcon 1",
-                "Professional Hyper-Overthinker Asset",
-                "Too Unbelievably Cool For This Planet",
-                "Absolute Main Character Node Detected"
+                "Diagnosis: Needs hot dynamic Biryani right now",
+                "Tomato Bajji dependency levels: Extremely high",
+                "Spiciness Threshold: True Andhra Scale",
+                "Junk food intake capacity: Absolute Legend",
+                "Bubble Tea avoidance status: Flawless Execution"
             ];
             document.getElementById("analysis").innerText = results[Math.floor(Math.random() * results.length)];
         }
 
         function spin() {
             playAudioTone(600, 0.05);
-            const symbols = ["👑", "🧋", "🔥", "💅", "😎"];
+            const symbols = ["🍛", "☕", "🫣", "🌶️", "💭"];
             let result = symbols[Math.floor(Math.random() * 5)] + " " +
                          symbols[Math.floor(Math.random() * 5)] + " " +
                          symbols[Math.floor(Math.random() * 5)];
@@ -269,11 +267,11 @@
         function excuse() {
             playAudioTone(380, 0.1);
             const excuses = [
-                "My local house cat ate my assignment homework layout",
-                "The server router WiFi connection became overly emotional",
-                "I intentionally forgot to respond on a professional level",
-                "I was extensively tied up being universally iconic",
-                "I required critical premium level beauty sleep blocks"
+                "What if I stuttered slightly when saying thank you 3 days ago?",
+                "Are they looking at me or just looking in my general directory?",
+                "I should have ordered double tomato bajjis instead of just one.",
+                "How can I decline this phone call without moving countries?",
+                "If I go there, will there be more than 4 human beings?"
             ];
             document.getElementById("excuseBox").innerText = excuses[Math.floor(Math.random() * excuses.length)];
         }
@@ -283,18 +281,18 @@
             const level = Math.floor(Math.random() * 100);
             const box = document.getElementById("hungerBox");
             if (level > 80) {
-                box.innerText = "🚨 ALERT STATUS: FEED HER IMMEDIATELY!";
+                box.innerText = "🚨 SOCIAL BATTERY ZERO. IMMEDIATE EVACUATION ORDERED.";
                 box.className = "mt-4 text-xl font-bold text-red-500";
             } else if (level > 50) {
-                box.innerText = "🍕 Caloric Deficiency: Premium Pizza Inbound Delivery Required";
+                box.innerText = "🫣 Moderately overwhelmed: Needs coffee alone in a quiet room.";
                 box.className = "mt-4 text-xl font-bold text-orange-400";
             } else {
-                box.innerText = "😌 Structural Calibration: Currently Metabolically Stable";
+                box.innerText = "😌 Safe Zone: Sitting in the corner checking phone with 0 eye contact.";
                 box.className = "mt-4 text-xl font-bold text-green-400";
             }
         }
 
-        // Runaway Button Interaction Framework
+        // Runaway Button Control Logic
         const btn = document.getElementById("runBtn");
         const zone = document.getElementById("complimentZone");
 
@@ -308,14 +306,14 @@
 
             btn.style.left = randX + "px";
             btn.style.top = randH + "px";
-            btn.innerText = "Lohitha said NO! 🏃‍♂️";
+            btn.innerText = "Anxiety triggered, ran away! 🏃‍♂️";
         });
 
         function destroy() {
             document.body.innerHTML = `
-                <div class="flex flex-col items-center justify-center min-h-screen text-center p-6 bg-black text-red-600 font-sans">
-                    <h1 class="text-6xl font-black tracking-tighter uppercase mb-4 animate-ping">💥 CORE COLLAPSE 💥</h1>
-                    <h2 class="text-2xl font-bold text-white max-w-xl">System Destruction Sequence Complete. Cause: Lohitha intentionally initialized every execution routine simultaneously.</h2>
+                <div class="flex flex-col items-center justify-center min-h-screen text-center p-6 bg-black text-orange-500 font-sans">
+                    <h1 class="text-6xl font-black tracking-tighter uppercase mb-4 animate-bounce">🚪 SOCIAL ESCAPE COMPLETE </h1>
+                    <h2 class="text-2xl font-bold text-white max-w-xl">Lohitha successfully shut down the server, locked the door, and went to eat Biryani in peace. No further eye contact permitted.</h2>
                 </div>
             `;
         }
