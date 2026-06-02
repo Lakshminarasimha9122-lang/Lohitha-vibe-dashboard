@@ -32,6 +32,7 @@
             👑 Lohitha Supremacy Dashboard 👑
         </h1>
 
+        <!-- Top Control Center Grid -->
         <div class="flex flex-wrap gap-3 justify-center mb-8">
             <button onclick="chaosMode()" class="bg-red-600 hover:bg-red-700 text-white font-bold px-5 py-2.5 rounded-xl shadow-lg active:scale-95 transition cursor-pointer">
                 🚨 Chaos Mode
@@ -47,8 +48,10 @@
             </button>
         </div>
 
+        <!-- Custom Notification Banner Panel -->
         <div id="statusBanner" class="hidden bg-slate-900 border border-slate-800 text-center text-lg font-bold p-4 rounded-2xl mb-8 animate-pulse text-orange-400"></div>
 
+        <!-- Main Interactive Slideshow Window -->
         <div class="bg-slate-900 rounded-3xl p-6 shadow-2xl border border-slate-800 relative">
             <div class="text-center">
                 <div class="w-80 h-80 mx-auto rounded-3xl border-4 border-orange-500 overflow-hidden shadow-2xl bg-slate-950 relative">
@@ -68,6 +71,7 @@
             </div>
         </div>
 
+        <!-- Core Telemetry Analytics Grid -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
             <div class="bg-slate-900 border border-slate-800/60 p-4 rounded-xl text-center shadow-lg">
                 <h3 class="text-xs font-bold uppercase text-slate-500 tracking-wider">🍛 Biryani &amp; Tomato Bajji</h3>
@@ -87,6 +91,7 @@
             </div>
         </div>
 
+        <!-- Component Blocks Grid Setup -->
         <div class="grid md:grid-cols-2 gap-6 mt-8">
             <div class="bg-slate-900 border border-slate-800 p-6 rounded-3xl shadow-xl flex flex-col justify-between">
                 <div>
@@ -121,6 +126,7 @@
             </div>
         </div>
 
+        <!-- Verified Badges -->
         <div class="bg-slate-900 border border-slate-800 mt-8 p-6 rounded-3xl shadow-xl">
             <h2 class="text-2xl font-black mb-4 tracking-tight text-yellow-400">🏆 Verified Badges Log</h2>
             <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-300 font-medium">
@@ -133,6 +139,7 @@
             </ul>
         </div>
 
+        <!-- Playground Moving Escape Button Area -->
         <div id="complimentZone" class="bg-slate-900 border border-slate-800 mt-8 p-6 rounded-3xl shadow-xl h-44 relative overflow-hidden">
             <h2 class="text-2xl font-black text-orange-400">🏃 Safe Escape Compliment Button</h2>
             <p class="text-xs text-slate-500 mt-0.5 mb-4">No eye contact required. Completely introvert friendly.</p>
@@ -141,6 +148,7 @@
             </button>
         </div>
 
+        <!-- Panic Button -->
         <div class="bg-slate-900 border border-slate-950 mt-8 p-6 rounded-3xl text-center shadow-xl mb-12">
             <h2 class="text-xl font-bold mb-3 text-red-500/80">⚠️ Panic Button</h2>
             <button onclick="destroy()" class="bg-red-950 text-red-400 hover:bg-red-900 border border-red-800/60 font-black px-6 py-3 rounded-xl tracking-wider active:scale-95 transition cursor-pointer">
@@ -148,6 +156,25 @@
             </button>
         </div>
 
+    </div>
+
+    <!-- 🐱 REALS-ONLY YAPAPA CAT VIDEO MODAL OVERLAY 🐱 -->
+    <div id="catModal" class="fixed inset-0 bg-black/90 hidden items-center justify-center z-[100] p-4 transition-all duration-300">
+        <div class="bg-slate-900 border-2 border-orange-500 max-w-sm w-full rounded-3xl p-6 shadow-2xl flex flex-col items-center relative">
+            <button onclick="closeCat()" class="absolute -top-3 -right-3 bg-red-600 hover:bg-red-700 text-white font-black w-8 h-8 rounded-full shadow-lg flex items-center justify-center cursor-pointer text-sm">✕</button>
+            
+            <h3 class="text-xl font-black text-orange-400 tracking-tight text-center mb-4">🛡️ Anxiety Shield: Yapapa Cat Activated</h3>
+            
+            <!-- Native Embedded Video Player Asset Frame -->
+            <div class="w-64 aspect-[9/16] bg-slate-950 rounded-2xl border border-slate-800 overflow-hidden shadow-2xl relative">
+                <video id="yapapaVideo" class="w-full h-full object-cover" loop controls>
+                    <source src="vidssave.com The Original 'Yapapa Ummm, Yapapa Haane’ New cat meme unlocked! 1080p.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            
+            <p class="text-xs text-slate-500 text-center mt-3 font-medium">Turn up the volume slider to hear the vibe snippet out loud!</p>
+        </div>
     </div>
 
     <script>
@@ -184,7 +211,7 @@
                 gainNode.connect(audioCtx.destination);
                 oscillator.frequency.value = freq;
                 oscillator.type = 'sawtooth';
-                gainNode.gain.setValueAtTime(0.06, audioCtx.currentTime);
+                gainNode.gain.setValueAtTime(0.04, audioCtx.currentTime);
                 oscillator.start();
                 oscillator.stop(audioCtx.currentTime + duration);
             } catch(e) {}
@@ -238,9 +265,28 @@
             flashBanner("🔮 Anxiety Processor State: " + moods[Math.floor(Math.random() * moods.length)], "text-red-400");
         }
 
+        /* Video Automation Engine Call Triggers */
         function summonCat() {
-            playAudioTone(680, 0.1);
-            flashBanner("🛡️ Anti-Social Bubble Deployed. Nobody can look at her for the next 60 minutes!", "text-cyan-400");
+            const modal = document.getElementById("catModal");
+            const video = document.getElementById("yapapaVideo");
+            
+            modal.classList.remove("hidden");
+            modal.classList.add("flex");
+            
+            // Auto playback target initializations
+            video.currentTime = 0;
+            video.play().catch(e => {
+                console.log("Autoplay blocker tripped, waiting for user interactions.");
+            });
+        }
+
+        function closeCat() {
+            const modal = document.getElementById("catModal");
+            const video = document.getElementById("yapapaVideo");
+            
+            video.pause();
+            modal.classList.add("hidden");
+            modal.classList.remove("flex");
         }
 
         function analyze() {
@@ -292,11 +338,10 @@
             }
         }
 
-        // Runaway Button Control Logic
         const btn = document.getElementById("runBtn");
         const zone = document.getElementById("complimentZone");
 
-        btn.addEventListener("mouseover", () => {
+        btn.addEventListener('mouseover', () => {
             playAudioTone(450, 0.04);
             const maxW = zone.clientWidth - btn.clientWidth - 32;
             const maxH = zone.clientHeight - btn.clientHeight - 64;
