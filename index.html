@@ -51,7 +51,7 @@
         <!-- Custom Notification Banner Panel -->
         <div id="statusBanner" class="hidden bg-slate-900 border border-slate-800 text-center text-lg font-bold p-4 rounded-2xl mb-8 animate-pulse text-orange-400"></div>
 
-        <!-- 💘 NEW RELATIONSHIP TEST CARD FOR LOHITHA 💘 -->
+        <!-- 💘 RELATIONSHIP TEST CARD FOR LOHITHA 💘 -->
         <div class="bg-gradient-to-r from-slate-900 to-purple-950 border-2 border-purple-500 rounded-3xl p-6 shadow-2xl mb-8 text-center">
             <h2 class="text-3xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400 mb-2">👀 Core Question Checkpoint</h2>
             <p class="text-slate-300 font-medium mb-5 text-sm">Please provide an honest assessment of current emotional configurations:</p>
@@ -121,7 +121,7 @@
                     <h2 class="text-2xl font-black mb-2 flex items-center gap-2 text-amber-400">🎰 Brain Slot Machine</h2>
                     <p id="slot" class="text-4xl font-extrabold text-center py-2 tracking-widest">🎲 🎲 🎲</p>
                 </div>
-                <button onclick="spin()" class="bg-amber-600 hover:bg-amber-700 font-bold px-4 py-2.5 rounded-xl mt-4 active:scale-95 transition cursor-pointer w-full text-center">Spin Brain Cells</button>
+                <button onclick="spin()" class="bg-yellow-600 hover:bg-yellow-700 font-bold px-4 py-2.5 rounded-xl mt-4 active:scale-95 transition cursor-pointer w-full text-center">Spin Brain Cells</button>
             </div>
 
             <div class="bg-slate-900 border border-slate-800 p-6 rounded-3xl shadow-xl flex flex-col justify-between">
@@ -181,7 +181,6 @@
             <h3 id="modalTitleText" class="text-xl font-black tracking-tight text-center mb-4">🛡️ Security Core Triggered</h3>
             
             <div class="w-64 aspect-[9/16] bg-slate-950 rounded-2xl border border-slate-800 overflow-hidden shadow-2xl relative">
-                <!-- Single Player Matrix Router -->
                 <video id="yapapaVideo" class="w-full h-full object-cover" loop controls playsinline preload="auto"></video>
             </div>
             
@@ -288,23 +287,22 @@
             video.muted = false;
 
             if (isYes) {
-                // Play Yapapa Cat Video
                 title.innerText = "❤️ Vibe Approved: Yapapa Cat Summoned!";
                 title.className = "text-xl font-black text-emerald-400 tracking-tight text-center mb-4";
-                video.src = "vidssave.com The Original 'Yapapa Ummm, Yapapa Haane’ New cat meme unlocked! 1080p.mp4";
+                // URL Encoded target targeting the long file name layout exactly
+                video.src = "vidssave.com%20The%20Original%20'Yapapa%20Ummm,%20Yapapa%20Haane%E2%80%99%20New%20cat%20meme%20unlocked!%201080p.mp4";
             } else {
-                // Play Screaming Angry Cat Video
                 title.innerText = "🚨 ACCESS DENIED: CHAOS ALARM!";
                 title.className = "text-xl font-black text-red-500 tracking-tight text-center mb-4";
-                video.src = "angry_cat.mp4";
+                // URL Encoded target mapping matching your uploaded German cat file perfectly
+                video.src = "vidssave.com%20german%20cat%20speech%20240P.mp4";
             }
 
             video.currentTime = 0;
-            video.play().catch(e => console.log("Autoplay check paused, waiting for click interaction parameters."));
+            video.play().catch(e => console.log("Autoplay paused, awaiting gesture interface metrics."));
         }
 
         function summonCat() {
-            // Default directly opens the safe Yapapa cat variant profile
             answerQuestion(true);
         }
 
@@ -312,7 +310,7 @@
             const modal = document.getElementById("catModal");
             const video = document.getElementById("yapapaVideo");
             video.pause();
-            video.src = ""; // Flush source buffer allocations
+            video.src = ""; 
             modal.classList.add("hidden");
             modal.classList.remove("flex");
         }
