@@ -1,292 +1,375 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lohitha's Premium Cinematic Slideshow</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style>
-        @keyframes flash {
-            0%, 100% { background-color: #ef4444; }
-            33% { background-color: #3b82f6; }
-            66% { background-color: #eab308; }
-        }
-        .chaotic-bg {
-            animation: flash 0.2s infinite linear !important;
-        }
-        .spin-infinite {
-            animation: spin 1s infinite linear;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lohitha Ultimate Chaos Dashboard</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+body{
+    transition:0.3s;
+}
+
+@keyframes flash{
+    0%{background:red;}
+    25%{background:blue;}
+    50%{background:yellow;}
+    75%{background:lime;}
+    100%{background:red;}
+}
+
+.chaos{
+    animation:flash 0.2s infinite;
+}
+
+@keyframes shake{
+    0%{transform:translate(0)}
+    25%{transform:translate(4px)}
+    50%{transform:translate(-4px)}
+    75%{transform:translate(4px)}
+    100%{transform:translate(0)}
+}
+
+.spin{
+    animation:spin 1s linear infinite;
+}
+</style>
 </head>
-<body id="body" class="bg-slate-950 text-slate-100 min-h-screen flex flex-col items-center justify-center p-4 font-sans transition-all duration-300 overflow-x-hidden">
 
-    <!-- Top Action Controls -->
-    <div class="w-full max-w-3xl flex justify-between mb-6 gap-4 z-50">
-        <button onclick="toggleChaos()" class="bg-red-600 hover:bg-red-700 text-white font-extrabold py-2.5 px-5 rounded-full shadow-xl transform active:scale-95 transition cursor-pointer text-sm tracking-wide">
-            🚨 Activate Chaos Mode
-        </button>
-        <button onclick="toggleCoolness()" class="bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-700 hover:to-fuchsia-700 text-white font-extrabold py-2.5 px-5 rounded-full shadow-xl transform active:scale-95 transition cursor-pointer text-sm tracking-wide">
-            🕶️ Make Lohitha 10x Cooler
-        </button>
-    </div>
+<body id="body" class="bg-slate-950 text-white min-h-screen p-6">
 
-    <!-- Main Slideshow Framework Card -->
-    <main id="mainCard" class="w-full max-w-3xl bg-slate-900 border border-slate-800 rounded-3xl shadow-2xl relative overflow-hidden transition-all duration-500 flex flex-col">
-        <!-- Floating Sunglasses Overlay -->
-        <div id="coolGlasses" class="hidden absolute top-24 left-1/2 -translate-x-1/2 text-8xl z-50 pointer-events-none drop-shadow-2xl transition-all">
-            🕶️
-        </div>
+<div class="max-w-5xl mx-auto">
 
-        <!-- Header Section Inside Card -->
-        <div class="p-6 border-b border-slate-800/60 bg-slate-900/50 backdrop-blur-md flex flex-col items-center">
-            <h1 id="mainTitle" class="text-3xl font-black text-center tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-pink-400 via-violet-400 to-cyan-400">
-                Lohitha's Vibe Metrics Dashboard
-            </h1>
-            <p class="text-slate-400 text-center text-xs mt-1">Extremely critical, real-time analytics on Lohitha's chaotic energy.</p>
-        </div>
+<h1 id="title"
+class="text-5xl font-black text-center mb-6">
+👑 Lohitha Supremacy Dashboard 👑
+</h1>
 
-        <!-- SLIDESHOW CONTAINER -->
-        <div class="relative flex-1 min-h-[420px] bg-slate-950/40 flex items-center justify-center p-4 group">
-            
-            <!-- Slide 1 -->
-            <div class="vibe-slide flex flex-col items-center w-full transition-all duration-500 opacity-100 scale-100">
-                <div class="w-full max-w-md aspect-square rounded-2xl overflow-hidden border border-slate-800 shadow-xl bg-slate-900">
-                    <img src="6ac983fb-89c7-485e-8da8-7c1a26d6a01a.jpg" alt="Vibe 1" class="w-full h-full object-cover">
-                </div>
-                <div class="mt-4 text-center bg-slate-900/80 border border-slate-800 px-4 py-2 rounded-xl text-sm font-semibold text-pink-400">
-                    🎯 Current Vibe State: Elite Configuration
-                </div>
-            </div>
+<div class="flex flex-wrap gap-3 justify-center mb-8">
 
-            <!-- Slide 2 -->
-            <div class="vibe-slide hidden flex flex-col items-center w-full transition-all duration-500 opacity-0 scale-95">
-                <div class="w-full max-w-md aspect-square rounded-2xl overflow-hidden border border-slate-800 shadow-xl bg-slate-900">
-                    <img src="2b4cb790-92a8-4fc4-9def-09c05ab4b9b8.jpg" alt="Vibe 2" class="w-full h-full object-cover">
-                </div>
-                <div class="mt-4 text-center bg-slate-900/80 border border-slate-800 px-4 py-2 rounded-xl text-sm font-semibold text-emerald-400">
-                    🔥 Current Vibe State: Attitude Setting Maxed Out
-                </div>
-            </div>
+<button onclick="chaosMode()"
+class="bg-red-600 px-4 py-2 rounded-xl">
+🚨 Chaos Mode
+</button>
 
-            <!-- Slide 3 -->
-            <div class="vibe-slide hidden flex flex-col items-center w-full transition-all duration-500 opacity-0 scale-95">
-                <div class="w-full max-w-md aspect-square rounded-2xl overflow-hidden border border-slate-800 shadow-xl bg-slate-900">
-                    <img src="67cd165b-8bd8-43e4-a4cc-b9a3c3958a0b.jpg" alt="Vibe 3" class="w-full h-full object-cover">
-                </div>
-                <div class="mt-4 text-center bg-slate-900/80 border border-slate-800 px-4 py-2 rounded-xl text-sm font-semibold text-cyan-400">
-                    ⚡ Current Vibe State: Unmatched Sassy Radiance
-                </div>
-            </div>
+<button onclick="coolMode()"
+class="bg-purple-600 px-4 py-2 rounded-xl">
+😎 Cool Mode
+</button>
 
-            <!-- Slide 4 -->
-            <div class="vibe-slide hidden flex flex-col items-center w-full transition-all duration-500 opacity-0 scale-95">
-                <div class="w-full max-w-md aspect-square rounded-2xl overflow-hidden border border-slate-800 shadow-xl bg-slate-900">
-                    <img src="0eee80a5-0865-48f2-8ec7-faa523db5622.jpg" alt="Vibe 4" class="w-full h-full object-cover">
-                </div>
-                <div class="mt-4 text-center bg-slate-900/80 border border-slate-800 px-4 py-2 rounded-xl text-sm font-semibold text-amber-400">
-                    🧋 Current Vibe State: Post-Bubble Tea Energy Boost
-                </div>
-            </div>
+<button onclick="scanMood()"
+class="bg-blue-600 px-4 py-2 rounded-xl">
+🧠 Mood Scan
+</button>
 
-            <!-- Slide 5 -->
-            <div class="vibe-slide hidden flex flex-col items-center w-full transition-all duration-500 opacity-0 scale-95">
-                <div class="w-full max-w-md aspect-square rounded-2xl overflow-hidden border border-slate-800 shadow-xl bg-slate-900">
-                    <img src="d42034cd-e556-4367-bc8e-852894ee885f.jpg" alt="Vibe 5" class="w-full h-full object-cover">
-                </div>
-                <div class="mt-4 text-center bg-slate-900/80 border border-slate-800 px-4 py-2 rounded-xl text-sm font-semibold text-violet-400">
-                    🔮 Current Vibe State: Mystical Main Character Energy
-                </div>
-            </div>
+<button onclick="summonCat()"
+class="bg-green-600 px-4 py-2 rounded-xl">
+🐱 Summon Cat
+</button>
 
-            <!-- Slide 6 -->
-            <div class="vibe-slide hidden flex flex-col items-center w-full transition-all duration-500 opacity-0 scale-95">
-                <div class="w-full max-w-md aspect-square rounded-2xl overflow-hidden border border-slate-800 shadow-xl bg-slate-900">
-                    <img src="7e74a0c9-9435-4583-901b-fdd1eb12f117.jpg" alt="Vibe 6" class="w-full h-full object-cover">
-                </div>
-                <div class="mt-4 text-center bg-slate-900/80 border border-slate-800 px-4 py-2 rounded-xl text-sm font-semibold text-rose-400">
-                    🎭 Current Vibe State: Pure Unfiltered Chaos Mode
-                </div>
-            </div>
+</div>
 
-            <!-- Slide 7 -->
-            <div class="vibe-slide hidden flex flex-col items-center w-full transition-all duration-500 opacity-0 scale-95">
-                <div class="w-full max-w-md aspect-square rounded-2xl overflow-hidden border border-slate-800 shadow-xl bg-slate-900">
-                    <img src="576235ba-0b25-4a20-95e9-bf2db1c3ff96.jpg" alt="Vibe 7" class="w-full h-full object-cover">
-                </div>
-                <div class="mt-4 text-center bg-slate-900/80 border border-slate-800 px-4 py-2 rounded-xl text-sm font-semibold text-orange-400">
-                    👑 Current Vibe State: Royal Highness Levels
-                </div>
-            </div>
+<div class="bg-slate-900 rounded-3xl p-6 shadow-2xl">
 
-            <!-- Slide 8 -->
-            <div class="vibe-slide hidden flex flex-col items-center w-full transition-all duration-500 opacity-0 scale-95">
-                <div class="w-full max-w-md aspect-square rounded-2xl overflow-hidden border border-slate-800 shadow-xl bg-slate-900">
-                    <img src="e4c0cb90-958f-4377-81f3-9c0687eeaa6e.jpg" alt="Vibe 8" class="w-full h-full object-cover">
-                </div>
-                <div class="mt-4 text-center bg-slate-900/80 border border-slate-800 px-4 py-2 rounded-xl text-sm font-semibold text-indigo-400">
-                    🌟 Current Vibe State: Definitive Lohitha Supremacy
-                </div>
-            </div>
+<div class="text-center">
 
-            <!-- Interactive Slideshow Navigation Arrows -->
-            <button onclick="changeSlide(-1)" class="absolute left-4 bg-slate-900/80 text-white border border-slate-800 p-3 rounded-full hover:bg-slate-800 transform active:scale-90 transition cursor-pointer md:opacity-0 group-hover:opacity-100 shadow-lg z-30">
-                ◀
-            </button>
-            <button onclick="changeSlide(1)" class="absolute right-4 bg-slate-900/80 text-white border border-slate-800 p-3 rounded-full hover:bg-slate-800 transform active:scale-90 transition cursor-pointer md:opacity-0 group-hover:opacity-100 shadow-lg z-30">
-                ▶
-            </button>
-        </div>
+<img id="photo"
+src="https://picsum.photos/500"
+class="w-80 h-80 mx-auto object-cover rounded-3xl border-4 border-purple-500">
 
-        <!-- Slideshow Indicators Dots -->
-        <div class="flex justify-center gap-2 mb-6" id="dotsContainer"></div>
+<h2 id="caption"
+class="text-2xl font-bold mt-4">
+🔥 Current Vibe: Main Character Energy
+</h2>
 
-        <!-- System Core Live Mock Metrics Analytics -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 px-6 pb-6 mt-2 border-t border-slate-800/40 pt-6 bg-slate-900/30">
-            <div class="bg-slate-950/40 border border-slate-800 p-3 rounded-xl text-center">
-                <span class="text-[10px] font-bold uppercase tracking-widest text-slate-500 block">Bubble Tea</span>
-                <p class="text-xl font-black text-emerald-400 mt-0.5">9.8 Liters</p>
-            </div>
-            <div class="bg-slate-950/40 border border-slate-800 p-3 rounded-xl text-center">
-                <span class="text-[10px] font-bold uppercase tracking-widest text-slate-500 block">Attitude Profile</span>
-                <p class="text-xl font-black text-cyan-400 mt-0.5">100% Infinite</p>
-            </div>
-            <div class="bg-slate-950/40 border border-slate-800 p-3 rounded-xl text-center">
-                <span class="text-[10px] font-bold uppercase tracking-widest text-slate-500 block">Sassy Index</span>
-                <p class="text-xl font-black text-amber-400 mt-0.5">&gt; 9000</p>
-            </div>
-            <div class="bg-slate-950/40 border border-slate-800 p-3 rounded-xl text-center">
-                <span class="text-[10px] font-bold uppercase tracking-widest text-slate-500 block">Vibe Metric</span>
-                <p id="vibeStat" class="text-xl font-black text-violet-400 mt-0.5">Pure Chaos</p>
-            </div>
-        </div>
+</div>
 
-        <!-- Runaway Button Playground Footer Section -->
-        <div class="flex flex-col items-center justify-center p-6 border-t border-slate-800/60 bg-slate-950/50 min-h-[110px] relative">
-            <p class="text-[11px] text-slate-500 mb-1">Click below to send Lohitha a normal compliment:</p>
-            <button id="runawayBtn" class="absolute bg-gradient-to-r from-amber-500 to-orange-600 text-white font-extrabold py-2 px-5 rounded-xl shadow-xl cursor-pointer transition-all duration-100 ease-out whitespace-nowrap z-40 text-sm">
-                Click to Compliment 🏆
-            </button>
-        </div>
-    </main>
+<div class="flex justify-center gap-4 mt-6">
 
-    <!-- Slide System Script Automation Engine -->
-    <script>
-        let currentSlideIdx = 0;
-        const slides = document.querySelectorAll('.vibe-slide');
-        const dotsContainer = document.getElementById('dotsContainer');
+<button onclick="prevSlide()"
+class="bg-slate-700 px-4 py-2 rounded-xl">
+◀ Prev
+</button>
 
-        // Create Indicators Dots dynamically based on slides total count
-        slides.forEach((_, idx) => {
-            const dot = document.createElement('button');
-            dot.className = `w-2.5 h-2.5 rounded-full transition-all duration-300 ${idx === 0 ? 'bg-violet-400 w-6' : 'bg-slate-700'}`;
-            dot.onclick = () => goToSlide(idx);
-            dotsContainer.appendChild(dot);
-        });
+<button onclick="nextSlide()"
+class="bg-slate-700 px-4 py-2 rounded-xl">
+Next ▶
+</button>
 
-        const dots = dotsContainer.querySelectorAll('button');
+</div>
 
-        function updateSlideDisplay() {
-            slides.forEach((slide, idx) => {
-                if (idx === currentSlideIdx) {
-                    slide.classList.remove('hidden');
-                    setTimeout(() => {
-                        slide.classList.remove('opacity-0', 'scale-95');
-                        slide.classList.add('opacity-100', 'scale-100');
-                    }, 20);
-                    dots[idx].classList.add('bg-violet-400', 'w-6');
-                    dots[idx].classList.remove('bg-slate-700');
-                } else {
-                    slide.classList.add('hidden', 'opacity-0', 'scale-95');
-                    slide.classList.remove('opacity-100', 'scale-100');
-                    dots[idx].classList.remove('bg-violet-400', 'w-6');
-                    dots[idx].classList.add('bg-slate-700');
-                }
-            });
-        }
+</div>
 
-        function changeSlide(direction) {
-            playBeep(320, 0.05);
-            currentSlideIdx = (currentSlideIdx + direction + slides.length) % slides.length;
-            updateSlideDisplay();
-        }
+<div class="grid md:grid-cols-4 gap-4 mt-8">
 
-        function goToSlide(idx) {
-            playBeep(320, 0.05);
-            currentSlideIdx = idx;
-            updateSlideDisplay();
-        }
+<div class="bg-slate-900 p-4 rounded-xl text-center">
+<h3>🧋 Bubble Tea</h3>
+<p class="text-2xl font-bold text-pink-400">999L</p>
+</div>
 
-        // System Core Sound Generator
-        function playBeep(freq, duration) {
-            try {
-                const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-                const oscillator = audioCtx.createOscillator();
-                const gainNode = audioCtx.createGain();
-                oscillator.connect(gainNode);
-                gainNode.connect(audioCtx.destination);
-                oscillator.frequency.value = freq;
-                oscillator.type = 'sawtooth';
-                gainNode.gain.setValueAtTime(0.08, audioCtx.currentTime);
-                oscillator.start();
-                oscillator.stop(audioCtx.currentTime + duration);
-            } catch(e) {}
-        }
+<div class="bg-slate-900 p-4 rounded-xl text-center">
+<h3>💅 Attitude</h3>
+<p class="text-2xl font-bold text-cyan-400">∞</p>
+</div>
 
-        // Runaway Button Logic Execution Engine
-        const btn = document.getElementById('runawayBtn');
-        const card = document.getElementById('mainCard');
+<div class="bg-slate-900 p-4 rounded-xl text-center">
+<h3>😂 Laughs</h3>
+<p class="text-2xl font-bold text-yellow-400">8642</p>
+</div>
 
-        btn.addEventListener('mouseover', () => {
-            playBeep(450, 0.04);
-            const padding = 35;
-            const maxX = card.clientWidth - btn.clientWidth - padding;
-            const maxY = card.clientHeight - btn.clientHeight - padding;
-            
-            const randomX = Math.max(padding, Math.floor(Math.random() * maxX)) - (card.clientWidth / 2) + (btn.clientWidth / 2);
-            const randomY = Math.max(padding, Math.floor(Math.random() * maxY)) - (card.clientHeight / 4);
+<div class="bg-slate-900 p-4 rounded-xl text-center">
+<h3>🔥 Drama</h3>
+<p class="text-2xl font-bold text-red-400">99%</p>
+</div>
 
-            btn.style.transform = `translate(${randomX}px, ${randomY}px)`;
-            btn.innerText = "Lohitha said NO! 🏃‍♂️";
-        });
+</div>
 
-        // Chaos Mode Toggle Feature Setup
-        let chaosInterval;
-        function toggleChaos() {
-            const body = document.getElementById('body');
-            const title = document.getElementById('mainTitle');
-            
-            if (body.classList.contains('chaotic-bg')) {
-                body.classList.remove('chaotic-bg');
-                title.classList.remove('spin-infinite');
-                title.innerText = "Lohitha's Vibe Metrics Dashboard";
-                clearInterval(chaosInterval);
-            } else {
-                body.classList.add('chaotic-bg');
-                title.classList.add('spin-infinite');
-                title.innerText = "💥 LOHITHA SUPREMACY! 💥";
-                chaosInterval = setInterval(() => {
-                    playBeep(Math.random() * 800 + 200, 0.08);
-                }, 140);
-            }
-        }
+<div class="bg-slate-900 mt-8 p-6 rounded-3xl">
 
-        // Sunglasses Filtering System Logic
-        function toggleCoolness() {
-            const glasses = document.getElementById('coolGlasses');
-            const vibe = document.getElementById('vibeStat');
-            
-            if (glasses.classList.contains('hidden')) {
-                glasses.classList.remove('hidden');
-                vibe.innerText = "😎 TOO COOL 😎";
-                vibe.classList.add('text-yellow-400');
-                playBeep(650, 0.25);
-            } else {
-                glasses.classList.add('hidden');
-                vibe.innerText = "Pure Chaos";
-                vibe.classList.remove('text-yellow-400');
-            }
-        }
-    </script>
+<h2 class="text-3xl font-bold mb-4">
+🤖 AI Bestie Analyzer
+</h2>
+
+<button onclick="analyze()"
+class="bg-pink-600 px-4 py-2 rounded-xl">
+Analyze Lohitha
+</button>
+
+<p id="analysis"
+class="mt-4 text-xl">
+Waiting for analysis...
+</p>
+
+</div>
+
+<div class="bg-slate-900 mt-8 p-6 rounded-3xl">
+
+<h2 class="text-3xl font-bold mb-4">
+🎰 Chaos Slot Machine
+</h2>
+
+<button onclick="spin()"
+class="bg-yellow-600 px-4 py-2 rounded-xl">
+SPIN
+</button>
+
+<p id="slot"
+class="text-4xl mt-4">
+🎲 🎲 🎲
+</p>
+
+</div>
+
+<div class="bg-slate-900 mt-8 p-6 rounded-3xl">
+
+<h2 class="text-3xl font-bold mb-4">
+🏆 Official Certificates
+</h2>
+
+<ul class="space-y-2">
+<li>🏅 CEO of Random Chaos</li>
+<li>🏅 Certified Drama Survivor</li>
+<li>🏅 Professional Overthinker</li>
+<li>🏅 Bubble Tea Ambassador</li>
+<li>🏅 Queen of Vibes</li>
+<li>🏅 Master of Sending "😂😂😂😂"</li>
+</ul>
+
+</div>
+
+<div class="bg-slate-900 mt-8 p-6 rounded-3xl">
+
+<h2 class="text-3xl font-bold mb-4">
+🎤 Excuse Generator
+</h2>
+
+<button onclick="excuse()"
+class="bg-orange-600 px-4 py-2 rounded-xl">
+Generate Excuse
+</button>
+
+</div>
+
+<div class="bg-slate-900 mt-8 p-6 rounded-3xl">
+
+<h2 class="text-3xl font-bold mb-4">
+🍕 Hunger Detector
+</h2>
+
+<button onclick="hunger()"
+class="bg-green-600 px-4 py-2 rounded-xl">
+Check Hunger
+</button>
+
+</div>
+
+<div class="bg-slate-900 mt-8 p-6 rounded-3xl relative h-40">
+
+<h2 class="text-3xl font-bold mb-4">
+🏃 Compliment Button
+</h2>
+
+<button id="runBtn"
+class="absolute bg-pink-600 px-4 py-2 rounded-xl">
+Click To Compliment
+</button>
+
+</div>
+
+<div class="bg-slate-900 mt-8 p-6 rounded-3xl">
+
+<h2 class="text-3xl font-bold mb-4">
+💣 Self Destruct
+</h2>
+
+<button onclick="destroy()"
+class="bg-red-700 px-4 py-2 rounded-xl">
+DO NOT CLICK
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+const images=[
+"https://picsum.photos/500?1",
+"https://picsum.photos/500?2",
+"https://picsum.photos/500?3",
+"https://picsum.photos/500?4"
+];
+
+const captions=[
+"🔥 Main Character Energy",
+"😎 Too Cool To Care",
+"🧋 Bubble Tea Powered",
+"👑 Queen Mode Activated"
+];
+
+let current=0;
+
+function showSlide(){
+document.getElementById("photo").src=images[current];
+document.getElementById("caption").innerText=captions[current];
+}
+
+function nextSlide(){
+current=(current+1)%images.length;
+showSlide();
+}
+
+function prevSlide(){
+current=(current-1+images.length)%images.length;
+showSlide();
+}
+
+function chaosMode(){
+document.body.classList.toggle("chaos");
+document.getElementById("title").classList.toggle("spin");
+}
+
+function coolMode(){
+alert("😎 Coolness increased by 1000%");
+}
+
+function scanMood(){
+
+const moods=[
+"👑 Queen Mode",
+"😴 Sleepy",
+"🧋 Needs Bubble Tea",
+"🔥 Causing Chaos",
+"😂 Laughing At Nothing"
+];
+
+alert(moods[Math.floor(Math.random()*moods.length)]);
+}
+
+function summonCat(){
+alert("🐱 Emergency Cat Arrived");
+}
+
+function analyze(){
+
+const results=[
+"Certified Goofball",
+"Chaos Level Critical",
+"Professional Overthinker",
+"Too Cool For This Planet",
+"Main Character Detected"
+];
+
+document.getElementById("analysis").innerText=
+results[Math.floor(Math.random()*results.length)];
+}
+
+function spin(){
+
+const e=["👑","🧋","🔥","💅","😎"];
+
+let result=
+e[Math.floor(Math.random()*5)]+" "+
+e[Math.floor(Math.random()*5)]+" "+
+e[Math.floor(Math.random()*5)];
+
+document.getElementById("slot").innerText=result;
+}
+
+function excuse(){
+
+const excuses=[
+"My cat ate my homework",
+"The WiFi was emotional",
+"I forgot professionally",
+"I was busy being iconic",
+"I needed beauty sleep"
+];
+
+alert(excuses[Math.floor(Math.random()*excuses.length)]);
+}
+
+function hunger(){
+
+const x=Math.floor(Math.random()*100);
+
+if(x>80)
+alert("🚨 FEED HER NOW");
+else if(x>50)
+alert("🍕 Pizza Required");
+else
+alert("😌 Currently Stable");
+}
+
+const btn=document.getElementById("runBtn");
+
+btn.addEventListener("mouseover",()=>{
+
+const x=Math.random()*300;
+const y=Math.random()*100;
+
+btn.style.left=x+"px";
+btn.style.top=y+"px";
+});
+
+function destroy(){
+
+document.body.innerHTML=
+`
+<div style="text-align:center;padding-top:100px;">
+<h1 style="font-size:70px;">
+💥 WEBSITE DESTROYED 💥
+</h1>
+<h2>
+Cause: Lohitha clicked everything.
+</h2>
+</div>
+`;
+}
+
+</script>
+
 </body>
 </html>
