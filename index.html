@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lohitha's Official Premium Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        @keyframes flash {
+            0%, 100% { background-color: #ef4444; }
+            33% { background-color: #3b82f6; }
+            66% { background-color: #eab308; }
+        }
+        .chaotic-bg {
+            animation: flash 0.2s infinite linear !important;
+        }
+        .spin-infinite {
+            animation: spin 1s infinite linear;
+        }
+    </style>
+</head>
+<body id="body" class="bg-slate-900 text-slate-100 min-h-screen flex flex-col items-center justify-center p-6 font-sans transition-all duration-300">
+
+    <div class="w-full max-w-2xl flex justify-between mb-8 gap-4">
+        <button onclick="toggleChaos()" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full shadow-lg transform active:scale-95 transition cursor-pointer">
+            🚨 Activate Chaos Mode
+        </button>
+        <button onclick="toggleCoolness()" class="bg-violet-600 hover:bg-violet-700 text-white font-bold py-2 px-4 rounded-full shadow-lg transform active:scale-95 transition cursor-pointer">
+            🕶️ Make Lohitha 10x Cooler
+        </button>
+    </div>
+
+    <main id="mainCard" class="w-full max-w-2xl bg-slate-800 border border-slate-700 rounded-2xl p-8 shadow-2xl relative overflow-hidden transition-all duration-300">
+        <div id="coolGlasses" class="hidden absolute top-12 left-1/2 -translate-x-1/2 text-7xl z-50 pointer-events-none drop-shadow-md">
+            🕶️
+        </div>
+
+        <h1 id="mainTitle" class="text-3xl font-black text-center mb-2 tracking-tight">
+            Lohitha's Vibe Metrics Dashboard
+        </h1>
+        <p class="text-slate-400 text-center text-sm mb-8">Extremely critical, real-time analytics on Lohitha's chaotic energy.</p>
+
+        <div class="grid grid-cols-2 gap-4 mb-8">
+            <div class="bg-slate-800/50 border border-slate-700 p-4 rounded-xl text-center">
+                <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Bubble Tea Consumed</span>
+                <p class="text-2xl font-black text-emerald-400 mt-1">9.8 Liters</p>
+            </div>
+            <div class="bg-slate-800/50 border border-slate-700 p-4 rounded-xl text-center">
+                <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Unmatched Attitude</span>
+                <p class="text-2xl font-black text-cyan-400 mt-1">100% Infinite</p>
+            </div>
+            <div class="bg-slate-800/50 border border-slate-700 p-4 rounded-xl text-center">
+                <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Sassy Replies Sent</span>
+                <p class="text-2xl font-black text-amber-400 mt-1">Over 9000</p>
+            </div>
+            <div class="bg-slate-800/50 border border-slate-700 p-4 rounded-xl text-center">
+                <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Overall Vibe</span>
+                <p id="vibeStat" class="text-2xl font-black text-violet-400 mt-1">Pure Chaos</p>
+            </div>
+        </div>
+
+        <div class="flex flex-col items-center justify-center min-h-[100px] relative mt-4">
+            <p class="text-xs text-slate-500 mb-2">Click below to give Lohitha a normal compliment:</p>
+            <button id="runawayBtn" class="absolute bg-gradient-to-r from-amber-500 to-orange-600 text-white font-extrabold py-3 px-6 rounded-xl shadow-lg cursor-pointer transition-all duration-100 ease-out whitespace-nowrap">
+                Click to Compliment 🏆
+            </button>
+        </div>
+    </main>
+
+    <script>
+        function playBeep(freq, duration) {
+            const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            const oscillator = audioCtx.createOscillator();
+            const gainNode = audioCtx.createGain();
+            oscillator.connect(gainNode);
+            gainNode.connect(audioCtx.destination);
+            oscillator.frequency.value = freq;
+            oscillator.type = 'sawtooth';
+            gainNode.gain.setValueAtTime(0.1, audioCtx.currentTime);
+            oscillator.start();
+            oscillator.stop(audioCtx.currentTime + duration);
+        }
+
+        const btn = document.getElementById('runawayBtn');
+        const card = document.getElementById('mainCard');
+
+        btn.addEventListener('mouseover', () => {
+            playBeep(450, 0.05);
+            const padding = 40;
+            const maxX = card.clientWidth - btn.clientWidth - padding;
+            const maxY = card.clientHeight - btn.clientHeight - padding;
+            
+            const randomX = Math.max(padding, Math.floor(Math.random() * maxX)) - (card.clientWidth / 2) + (btn.clientWidth / 2);
+            const randomY = Math.max(padding, Math.floor(Math.random() * maxY)) - (card.clientHeight / 3);
+
+            btn.style.transform = `translate(${randomX}px, ${randomY}px)`;
+            btn.innerText = "Lohitha said NO! 🏃‍♂️";
+        });
+
+        let chaosInterval;
+        function toggleChaos() {
+            const body = document.getElementById('body');
+            const title = document.getElementById('mainTitle');
+            
+            if (body.classList.contains('chaotic-bg')) {
+                body.classList.remove('chaotic-bg');
+                title.classList.remove('spin-infinite');
+                title.innerText = "Lohitha's Vibe Metrics Dashboard";
+                clearInterval(chaosInterval);
+            } else {
+                body.classList.add('chaotic-bg');
+                title.classList.add('spin-infinite');
+                title.innerText = "💥 LOHITHA SUPREMACY! 💥";
+                chaosInterval = setInterval(() => {
+                    playBeep(Math.random() * 800 + 200, 0.1);
+                }, 150);
+            }
+        }
+
+        function toggleCoolness() {
+            const glasses = document.getElementById('coolGlasses');
+            const vibe = document.getElementById('vibeStat');
+            
+            if (glasses.classList.contains('hidden')) {
+                glasses.classList.remove('hidden');
+                vibe.innerText = "😎 TOO COOL 😎";
+                vibe.classList.add('text-yellow-400');
+                playBeep(600, 0.3);
+            } else {
+                glasses.classList.add('hidden');
+                vibe.innerText = "Pure Chaos";
+                vibe.classList.remove('text-yellow-400');
+            }
+        }
+    </script>
+</body>
+</html>
