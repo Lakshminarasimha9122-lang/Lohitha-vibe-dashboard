@@ -3,188 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lohitha Ultimate Chaos Dashboard</title>
+    <title>Lohitha Premium Workspace Portfolio</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
         body {
-            transition: background-color 0.3s;
+            background-color: #030712;
+            transition: background-color 0.4s ease;
         }
         @keyframes flash {
-            0% { background-color: #ef4444; }
-            25% { background-color: #3b82f6; }
-            50% { background-color: #eab308; }
-            75% { background-color: #22c55e; }
-            100% { background-color: #ef4444; }
+            0%, 100% { background-color: #ef4444; }
+            25% { background-color: #f59e0b; }
+            50% { background-color: #3b82f6; }
+            75% { background-color: #10b981; }
         }
-        .chaos {
-            animation: flash 0.2s infinite linear !important;
+        .chaos-active {
+            animation: flash 0.3s infinite linear !important;
         }
-        .spin {
-            animation: spin 1s linear infinite;
+        .spin-active {
+            animation: spin 2s linear infinite;
         }
     </style>
 </head>
-<body id="body" class="bg-slate-950 text-white min-h-screen p-6 font-sans">
+<body class="text-slate-100 min-h-screen px-4 py-8 md:py-12 flex flex-col items-center selection:bg-orange-500 selection:text-white">
 
-    <div class="max-w-5xl mx-auto">
-
-        <h1 id="title" class="text-5xl font-black text-center mb-6 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-orange-400 via-red-400 to-amber-500">
-            👑 Lohitha Supremacy Dashboard 👑
-        </h1>
-
-        <!-- Top Control Center Grid -->
-        <div class="flex flex-wrap gap-3 justify-center mb-8">
-            <button onclick="chaosMode()" class="bg-red-600 hover:bg-red-700 text-white font-bold px-5 py-2.5 rounded-xl shadow-lg active:scale-95 transition cursor-pointer">
-                🚨 Chaos Mode
-            </button>
-            <button onclick="coolMode()" class="bg-amber-600 hover:bg-amber-700 text-white font-bold px-5 py-2.5 rounded-xl shadow-lg active:scale-95 transition cursor-pointer">
-                ☕ Coffee Boost
-            </button>
-            <button onclick="scanMood()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-5 py-2.5 rounded-xl shadow-lg active:scale-95 transition cursor-pointer">
-                🧠 Overthink Scan
-            </button>
-            <button onclick="summonCat()" class="bg-green-600 hover:bg-green-700 text-white font-bold px-5 py-2.5 rounded-xl shadow-lg active:scale-95 transition cursor-pointer">
-                🐱 Summon Anxiety Shield
-            </button>
-        </div>
-
-        <!-- Custom Notification Banner Panel -->
-        <div id="statusBanner" class="hidden bg-slate-900 border border-slate-800 text-center text-lg font-bold p-4 rounded-2xl mb-8 animate-pulse text-orange-400"></div>
-
-        <!-- 💘 RELATIONSHIP TEST CARD FOR LOHITHA 💘 -->
-        <div class="bg-gradient-to-r from-slate-900 to-purple-950 border-2 border-purple-500 rounded-3xl p-6 shadow-2xl mb-8 text-center">
-            <h2 class="text-3xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400 mb-2">👀 Core Question Checkpoint</h2>
-            <p class="text-slate-300 font-medium mb-5 text-sm">Please provide an honest assessment of current emotional configurations:</p>
-            <h3 class="text-2xl font-extrabold text-white mb-6">"Do you like me?"</h3>
-            <div class="flex justify-center gap-6">
-                <button onclick="answerQuestion(true)" class="bg-emerald-600 hover:bg-emerald-500 text-white font-black text-lg px-8 py-3 rounded-2xl shadow-xl transform active:scale-95 transition cursor-pointer tracking-wide">
-                    YES 👍
+    <div class="w-full max-w-5xl flex flex-col gap-6">
+        
+        <header class="flex flex-col md:flex-row justify-between items-center bg-slate-900/40 border border-slate-800/80 backdrop-blur-md rounded-2xl p-6 gap-4">
+            <div>
+                <h1 id="title" class="text-3xl md:text-4xl font-black tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-orange-400 via-rose-400 to-amber-500">
+                    Lohitha Supremacy Workspace
+                </h1>
+                <p class="text-slate-400 text-xs mt-1 font-medium tracking-wide uppercase">Core Node System // Reality Telemetry Profile</p>
+            </div>
+            <div class="flex flex-wrap gap-2">
+                <button onclick="chaosMode()" class="bg-red-950/60 hover:bg-red-900/80 text-red-400 border border-red-900/60 font-bold px-4 py-2 rounded-xl text-xs transition active:scale-95 cursor-pointer">
+                    🚨 Chaos Mod
                 </button>
-                <button onclick="answerQuestion(false)" class="bg-rose-700 hover:bg-rose-600 text-white font-black text-lg px-8 py-3 rounded-2xl shadow-xl transform active:scale-95 transition cursor-pointer tracking-wide">
-                    NO 👎
+                <button onclick="coolMode()" class="bg-amber-950/60 hover:bg-amber-900/80 text-amber-400 border border-amber-900/60 font-bold px-4 py-2 rounded-xl text-xs transition active:scale-95 cursor-pointer">
+                    ☕ Coffee Infusion
                 </button>
             </div>
-        </div>
+        </header>
 
-        <!-- Main Interactive Slideshow Window -->
-        <div class="bg-slate-900 rounded-3xl p-6 shadow-2xl border border-slate-800 relative">
-            <div class="text-center">
-                <div class="w-80 h-80 mx-auto rounded-3xl border-4 border-orange-500 overflow-hidden shadow-2xl bg-slate-950 relative">
-                    <img id="photo" src="6ac983fb-89c7-485e-8da8-7c1a26d6a01a.jpg" class="w-full h-full object-cover transition-all duration-300">
+        <div id="statusBanner" class="hidden bg-slate-900/80 border border-orange-500/30 text-center text-sm font-bold p-4 rounded-xl text-orange-400 animate-pulse"></div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <div class="md:col-span-2 bg-slate-900/30 border border-slate-800/80 rounded-3xl p-6 flex flex-col justify-between shadow-xl relative overflow-hidden backdrop-blur-sm min-h-[460px]">
+                <div class="flex justify-between items-center mb-4">
+                    <span class="text-[11px] font-bold text-slate-500 uppercase tracking-widest">01 // Frame Carousel</span>
+                    <span class="text-xs bg-slate-800 text-slate-400 font-semibold px-2.5 py-1 rounded-full border border-slate-700/50">Live Sync</span>
                 </div>
-                <h2 id="caption" class="text-2xl font-black mt-5 tracking-tight text-orange-400">
-                    🎯 Current Vibe State: Elite Configuration
-                </h2>
+                
+                <div class="flex-1 flex flex-col items-center justify-center py-4">
+                    <div class="w-72 h-72 rounded-2xl overflow-hidden border-2 border-orange-500/30 bg-slate-950 shadow-2xl relative">
+                        <img id="photo" src="6ac983fb-89c7-485e-8da8-7c1a26d6a01a.jpg" class="w-full h-full object-cover transition-all duration-300 transform scale-100" alt="Lohitha Asset">
+                    </div>
+                    <p id="caption" class="text-lg font-black mt-4 text-center tracking-tight text-orange-400 bg-slate-950/50 px-4 py-1.5 rounded-xl border border-slate-800/60">
+                        🎯 Current Vibe State: Elite Configuration
+                    </p>
+                </div>
+
+                <div class="flex justify-center gap-3 mt-2">
+                    <button onclick="prevSlide()" class="bg-slate-800/80 hover:bg-slate-700 text-slate-200 font-bold px-4 py-2 rounded-xl text-xs transition active:scale-95 cursor-pointer border border-slate-700/60">
+                        ◀ Previous
+                    </button>
+                    <button onclick="nextSlide()" class="bg-slate-800/80 hover:bg-slate-700 text-slate-200 font-bold px-4 py-2 rounded-xl text-xs transition active:scale-95 cursor-pointer border border-slate-700/60">
+                        Next Slide ▶
+                    </button>
+                </div>
             </div>
-            <div class="flex justify-center gap-4 mt-6">
-                <button onclick="prevSlide()" class="bg-slate-800 hover:bg-slate-700 px-5 py-2 rounded-xl font-bold transition active:scale-95 cursor-pointer">
-                    ◀ Prev
+
+            <div class="bg-gradient-to-b from-slate-900/60 to-purple-950/20 border border-purple-500/30 rounded-3xl p-6 flex flex-col justify-between shadow-xl backdrop-blur-sm">
+                <div>
+                    <span class="text-[11px] font-bold text-purple-400 uppercase tracking-widest block mb-4">02 // Decision Node</span>
+                    <h2 class="text-2xl font-black text-white tracking-tight leading-snug">Emotional Validation Checkpoint</h2>
+                    <p class="text-slate-400 text-xs mt-1.5">Provide immediate honest metric logs regarding configuration variables.</p>
+                </div>
+                
+                <div class="py-6 text-center">
+                    <p class="text-xl font-extrabold text-slate-100 tracking-tight">"Do you like me?"</p>
+                </div>
+
+                <div class="grid grid-cols-2 gap-3">
+                    <button onclick="answerQuestion(true)" class="bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-400 border border-emerald-500/30 font-bold py-3 rounded-xl transition active:scale-95 text-xs tracking-wider cursor-pointer">
+                        YES 👍
+                    </button>
+                    <button onclick="answerQuestion(false)" class="bg-rose-600/20 hover:bg-rose-600/30 text-rose-400 border border-rose-500/30 font-bold py-3 rounded-xl transition active:scale-95 text-xs tracking-wider cursor-pointer">
+                        NO 👎
+                    </button>
+                </div>
+            </div>
+
+            <div class="md:col-span-3 grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-slate-900/30 border border-slate-800/80 p-4 rounded-2xl shadow-md">
+                    <span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">Dietary Profile</span>
+                    <p class="text-lg font-black text-orange-400 mt-1">Biryani &amp; Bajji</p>
+                </div>
+                <div class="bg-slate-900/30 border border-slate-800/80 p-4 rounded-2xl shadow-md">
+                    <span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">Beverage Engine</span>
+                    <p class="text-lg font-black text-amber-500 mt-1">Normal Coffee</p>
+                </div>
+                <div class="bg-slate-900/30 border border-slate-800/80 p-4 rounded-2xl shadow-md">
+                    <span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">Overthinking Memory</span>
+                    <p class="text-lg font-black text-red-400 mt-1">48,291 Threads</p>
+                </div>
+                <div class="bg-slate-900/30 border border-slate-800/80 p-4 rounded-2xl shadow-md">
+                    <span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">Social Battery</span>
+                    <p class="text-lg font-black text-cyan-400 mt-1">100% Introvert</p>
+                </div>
+            </div>
+
+            <div class="bg-slate-900/30 border border-slate-800/80 rounded-3xl p-6 flex flex-col justify-between backdrop-blur-sm shadow-xl min-h-[220px]">
+                <div>
+                    <span class="text-[11px] font-bold text-slate-500 uppercase tracking-widest block mb-2">03 // Food Audit</span>
+                    <h3 class="text-xl font-black text-slate-200 tracking-tight">AP Junk Food Radar</h3>
+                    <p id="analysis" class="text-slate-400 text-sm mt-2 font-medium">Awaiting manual kitchen synchronization requests...</p>
+                </div>
+                <button onclick="analyze()" class="bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs py-2.5 rounded-xl border border-slate-700 transition active:scale-95 cursor-pointer w-full text-center tracking-wide">
+                    Scan Kitchen Logs
                 </button>
-                <button onclick="nextSlide()" class="bg-slate-800 hover:bg-slate-700 px-5 py-2 rounded-xl font-bold transition active:scale-95 cursor-pointer">
-                    Next ▶
+            </div>
+
+            <div class="bg-slate-900/30 border border-slate-800/80 rounded-3xl p-6 flex flex-col justify-between backdrop-blur-sm shadow-xl min-h-[220px]">
+                <div>
+                    <span class="text-[11px] font-bold text-slate-500 uppercase tracking-widest block mb-2">04 // Logic Game</span>
+                    <h3 class="text-xl font-black text-slate-200 tracking-tight">Brain Slot Machine</h3>
+                    <div id="slot" class="text-3xl font-extrabold text-center py-1 tracking-widest text-amber-500 drop-shadow-md">🎲 🎲 🎲</div>
+                </div>
+                <button onclick="spin()" class="bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs py-2.5 rounded-xl border border-slate-700 transition active:scale-95 cursor-pointer w-full text-center tracking-wide">
+                    Spin Brain Cells
                 </button>
             </div>
+
+            <div class="bg-slate-900/30 border border-slate-800/80 rounded-3xl p-6 flex flex-col justify-between backdrop-blur-sm shadow-xl min-h-[220px]">
+                <div>
+                    <span class="text-[11px] font-bold text-slate-500 uppercase tracking-widest block mb-2">05 // State Generator</span>
+                    <h3 class="text-xl font-black text-slate-200 tracking-tight">Anxiety Thought Tracker</h3>
+                    <p id="excuseBox" class="text-slate-400 text-xs mt-2 font-medium leading-relaxed">Processing social scenarios from 2019...</p>
+                </div>
+                <button onclick="excuse()" class="bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs py-2.5 rounded-xl border border-slate-700 transition active:scale-95 cursor-pointer w-full text-center tracking-wide">
+                    Analyze Thoughts
+                </button>
+            </div>
+
+            <div class="md:col-span-2 bg-slate-900/30 border border-slate-800/80 rounded-3xl p-6 shadow-xl backdrop-blur-sm">
+                <span class="text-[11px] font-bold text-slate-500 uppercase tracking-widest block mb-4">06 // System Credentials</span>
+                <h3 class="text-xl font-black text-slate-200 tracking-tight mb-3">Verified Matrix Log Badges</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-semibold text-slate-300">
+                    <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800/60 flex items-center gap-2">🏅 Tomato Bajji Connoisseur</div>
+                    <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800/60 flex items-center gap-2">🏅 Anti-Bubble Tea Coalition Member</div>
+                    <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800/60 flex items-center gap-2">🏅 S-Tier Biryani Quality Analyst</div>
+                    <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800/60 flex items-center gap-2">🏅 Scenario Architect (Overthinking)</div>
+                    <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800/60 flex items-center gap-2">🏅 3-Business-Day Reply Specialist</div>
+                    <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800/60 flex items-center gap-2">🏅 Professional "Will Stay Home" Node</div>
+                </div>
+            </div>
+
+            <div id="complimentZone" class="bg-slate-900/30 border border-slate-800/80 rounded-3xl p-6 flex flex-col justify-between shadow-xl relative overflow-hidden backdrop-blur-sm min-h-[220px]">
+                <div>
+                    <span class="text-[11px] font-bold text-slate-500 uppercase tracking-widest block mb-1">07 // Escape Matrix</span>
+                    <h3 class="text-xl font-black text-slate-200 tracking-tight">Compliment Reloader</h3>
+                    <p class="text-slate-400 text-xs mt-1">Zero eye contact required. Completely introvert secure.</p>
+                </div>
+                
+                <div class="relative h-16 w-full">
+                    <button id="runBtn" class="absolute bg-gradient-to-r from-orange-500 to-rose-600 font-extrabold text-white text-xs px-4 py-2.5 rounded-xl shadow-lg transition-all duration-100 ease-out whitespace-nowrap cursor-pointer z-20" style="left: 0px; bottom: 0px;">
+                        Click to Compliment safely 🏆
+                    </button>
+                </div>
+            </div>
+
         </div>
 
-        <!-- Core Telemetry Analytics Grid -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
-            <div class="bg-slate-900 border border-slate-800/60 p-4 rounded-xl text-center shadow-lg">
-                <h3 class="text-xs font-bold uppercase text-slate-500 tracking-wider">🍛 Biryani &amp; Tomato Bajji</h3>
-                <p class="text-2xl font-black text-orange-400 mt-1">Unlimited</p>
-            </div>
-            <div class="bg-slate-900 border border-slate-800/60 p-4 rounded-xl text-center shadow-lg">
-                <h3 class="text-xs font-bold uppercase text-slate-500 tracking-wider">☕ Coffee Level</h3>
-                <p class="text-2xl font-black text-amber-500 mt-1">Normal &amp; Strong</p>
-            </div>
-            <div class="bg-slate-900 border border-slate-800/60 p-4 rounded-xl text-center shadow-lg">
-                <h3 class="text-xs font-bold uppercase text-slate-500 tracking-wider">🧠 Overthinking Tabs Open</h3>
-                <p class="text-2xl font-black text-red-400 mt-1">48,291</p>
-            </div>
-            <div class="bg-slate-900 border border-slate-800/60 p-4 rounded-xl text-center shadow-lg">
-                <h3 class="text-xs font-bold uppercase text-slate-500 tracking-wider">🫣 Social Anxiety</h3>
-                <p class="text-2xl font-black text-cyan-400 mt-1">100% Introvert</p>
-            </div>
-        </div>
-
-        <!-- Component Blocks Grid Setup -->
-        <div class="grid md:grid-cols-2 gap-6 mt-8">
-            <div class="bg-slate-900 border border-slate-800 p-6 rounded-3xl shadow-xl flex flex-col justify-between">
-                <div>
-                    <h2 class="text-2xl font-black mb-2 flex items-center gap-2 text-red-400">🤖 AP Junk Food Radar</h2>
-                    <p id="analysis" class="text-lg text-slate-300 min-h-[40px] flex items-center">Waiting for meal logs...</p>
-                </div>
-                <button onclick="analyze()" class="bg-orange-600 hover:bg-orange-700 font-bold px-4 py-2.5 rounded-xl mt-4 active:scale-95 transition cursor-pointer w-full text-center">Scan Kitchen Orders</button>
-            </div>
-
-            <div class="bg-slate-900 border border-slate-800 p-6 rounded-3xl shadow-xl flex flex-col justify-between">
-                <div>
-                    <h2 class="text-2xl font-black mb-2 flex items-center gap-2 text-amber-400">🎰 Brain Slot Machine</h2>
-                    <p id="slot" class="text-4xl font-extrabold text-center py-2 tracking-widest">🎲 🎲 🎲</p>
-                </div>
-                <button onclick="spin()" class="bg-yellow-600 hover:bg-yellow-700 font-bold px-4 py-2.5 rounded-xl mt-4 active:scale-95 transition cursor-pointer w-full text-center">Spin Brain Cells</button>
-            </div>
-
-            <div class="bg-slate-900 border border-slate-800 p-6 rounded-3xl shadow-xl flex flex-col justify-between">
-                <div>
-                    <h2 class="text-2xl font-black mb-4 text-rose-400">🎤 What Is She Thinking About Right Now?</h2>
-                    <p id="excuseBox" class="text-lg text-slate-300 min-h-[40px] flex items-center">Analyzing scenarios from 2019...</p>
-                </div>
-                <button onclick="excuse()" class="bg-rose-600 hover:bg-rose-700 font-bold px-4 py-2.5 rounded-xl active:scale-95 transition cursor-pointer w-full text-center">Analyze Thoughts</button>
-            </div>
-
-            <div class="bg-slate-900 border border-slate-800 p-6 rounded-3xl shadow-xl flex flex-col justify-between">
-                <div>
-                    <h2 class="text-2xl font-black mb-4 text-cyan-400">🫣 Social Battery Gauge</h2>
-                    <p id="hungerBox" class="text-lg text-slate-300 min-h-[40px] flex items-center">Checking tolerance for human interaction...</p>
-                </div>
-                <button onclick="hunger()" class="bg-cyan-600 hover:bg-cyan-700 font-bold px-4 py-2.5 rounded-xl active:scale-95 transition cursor-pointer w-full text-center">Check Battery Level</button>
-            </div>
-        </div>
-
-        <!-- Verified Badges -->
-        <div class="bg-slate-900 border border-slate-800 mt-8 p-6 rounded-3xl shadow-xl">
-            <h2 class="text-2xl font-black mb-4 tracking-tight text-yellow-400">🏆 Verified Badges Log</h2>
-            <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-300 font-medium">
-                <li class="bg-slate-950/40 p-3 rounded-xl border border-slate-800/80">🏅 Tomato Bajji Connoisseur</li>
-                <li class="bg-slate-950/40 p-3 rounded-xl border border-slate-800/80">🏅 Bubble Tea Rejector (Pure Filter Coffee Team)</li>
-                <li class="bg-slate-950/40 p-3 rounded-xl border border-slate-800/80">🏅 Professional Scenario Creator</li>
-                <li class="bg-slate-950/40 p-3 rounded-xl border border-slate-800/80">🏅 "Will Stay Home" Specialist</li>
-                <li class="bg-slate-950/40 p-3 rounded-xl border border-slate-800/80">🏅 S-Tier Biryani Evaluator</li>
-                <li class="bg-slate-950/40 p-3 rounded-xl border border-slate-800/80">🏅 Master of Reading Texts and Replying After 3 Business Days</li>
-            </ul>
-        </div>
-
-        <!-- Playground Moving Escape Button Area -->
-        <div id="complimentZone" class="bg-slate-900 border border-slate-800 mt-8 p-6 rounded-3xl shadow-xl h-44 relative overflow-hidden">
-            <h2 class="text-2xl font-black text-orange-400">🏃 Safe Escape Compliment Button</h2>
-            <p class="text-xs text-slate-500 mt-0.5 mb-4">No eye contact required. Completely introvert friendly.</p>
-            <button id="runBtn" class="absolute bg-gradient-to-r from-orange-500 to-red-600 font-extrabold text-white px-5 py-2.5 rounded-xl shadow-lg transition-all duration-100 ease-out whitespace-nowrap cursor-pointer z-20" style="left: 24px; bottom: 24px;">
-                Click to Compliment safely 🏆
+        <footer class="bg-slate-900/20 border border-slate-900 text-center p-4 rounded-xl flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-slate-500 font-semibold mb-12">
+            <span>Core Diagnostics Status: Online // Active</span>
+            <button onclick="destroy()" class="text-red-500/70 hover:text-red-400 font-bold cursor-pointer uppercase tracking-wider text-[11px]">
+                💣 Initialize Isolation Sequence
             </button>
-        </div>
-
-        <!-- Panic Button -->
-        <div class="bg-slate-900 border border-slate-950 mt-8 p-6 rounded-3xl text-center shadow-xl mb-12">
-            <h2 class="text-xl font-bold mb-3 text-red-500/80">⚠️ Panic Button</h2>
-            <button onclick="destroy()" class="bg-red-950 text-red-400 hover:bg-red-900 border border-red-800/60 font-black px-6 py-3 rounded-xl tracking-wider active:scale-95 transition cursor-pointer">
-                💣 LEAVE ME ALONE SEQUENCE
-            </button>
-        </div>
+        </footer>
 
     </div>
 
-    <!-- 🐱 CONDITIONAL MULTI-PLAYER CAT VIDEO MODAL OVERLAY 🐱 -->
     <div id="catModal" class="fixed inset-0 bg-black/95 hidden items-center justify-center z-[100] p-4 transition-all duration-300">
-        <div class="bg-slate-900 border-2 border-orange-500 max-w-sm w-full rounded-3xl p-6 shadow-2xl flex flex-col items-center relative">
-            <button onclick="closeCat()" class="absolute -top-3 -right-3 bg-red-600 hover:bg-red-700 text-white font-black w-8 h-8 rounded-full shadow-lg flex items-center justify-center cursor-pointer text-sm">✕</button>
-            
-            <h3 id="modalTitleText" class="text-xl font-black tracking-tight text-center mb-4">🛡️ Security Core Triggered</h3>
-            
+        <div class="bg-slate-900 border border-slate-800 max-w-sm w-full rounded-3xl p-6 shadow-2xl flex flex-col items-center relative">
+            <button onclick="closeCat()" class="absolute -top-3 -right-3 bg-red-600 hover:bg-red-700 text-white font-black w-8 h-8 rounded-full shadow-lg flex items-center justify-center cursor-pointer text-xs">✕</button>
+            <h3 id="modalTitleText" class="text-lg font-black tracking-tight text-center mb-4">🛡️ Security Gateway Routing</h3>
             <div class="w-64 aspect-[9/16] bg-slate-950 rounded-2xl border border-slate-800 overflow-hidden shadow-2xl relative">
                 <video id="yapapaVideo" class="w-full h-full object-cover" loop controls playsinline preload="auto"></video>
             </div>
-            
-            <p class="text-[11px] text-slate-500 text-center mt-3 font-medium">Toggle device volume parameters to stream full matrix audio configurations.</p>
+            <p class="text-[10px] text-slate-500 text-center mt-3 font-medium">Verify system device balance profiles to load raw audio strings.</p>
         </div>
     </div>
 
@@ -205,7 +213,7 @@
             "🔥 Current Vibe State: Tomato Bajji Level Critical",
             "⚡ Current Vibe State: Formulating 14 Fake Scenarios",
             "☕ Current Vibe State: Normal Coffee Infusion Complete",
-            "🔮 Current Vibe State: Intensely Tracking Who Is Looking At Her",
+            "🔮 Current Vibe State: Tracking Who Is Looking At Her",
             "🎭 Current Vibe State: High Spicy Biryani Consumption",
             "👑 Current Vibe State: Social Battery At 4%",
             "🌟 Current Vibe State: Ultimate AP Local Mode Activated"
@@ -222,7 +230,7 @@
                 gainNode.connect(audioCtx.destination);
                 oscillator.frequency.value = freq;
                 oscillator.type = 'sawtooth';
-                gainNode.gain.setValueAtTime(0.04, audioCtx.currentTime);
+                gainNode.gain.setValueAtTime(0.02, audioCtx.currentTime);
                 oscillator.start();
                 oscillator.stop(audioCtx.currentTime + duration);
             } catch(e) {}
@@ -231,7 +239,7 @@
         function flashBanner(text, colorClass) {
             const banner = document.getElementById("statusBanner");
             banner.innerText = text;
-            banner.className = `bg-slate-900 border border-slate-800 text-center text-lg font-bold p-4 rounded-2xl mb-8 animate-pulse ${colorClass}`;
+            banner.className = `bg-slate-900 border border-slate-800 text-center text-sm font-bold p-4 rounded-xl mb-6 animate-pulse ${colorClass}`;
         }
 
         function showSlide() {
@@ -254,8 +262,8 @@
         showSlide();
 
         function chaosMode() {
-            document.body.classList.toggle("chaos");
-            document.getElementById("title").classList.toggle("spin");
+            document.body.classList.toggle("chaos-active");
+            document.getElementById("title").classList.toggle("spin-active");
             playAudioTone(220, 0.1);
         }
 
@@ -276,7 +284,6 @@
             flashBanner("🔮 Anxiety Processor State: " + moods[Math.floor(Math.random() * moods.length)], "text-red-400");
         }
 
-        /* 💘 ROUTING CHOICE QUESTION LOGIC ENGINE 💘 */
         function answerQuestion(isYes) {
             const modal = document.getElementById("catModal");
             const video = document.getElementById("yapapaVideo");
@@ -284,22 +291,19 @@
 
             modal.classList.remove("hidden");
             modal.classList.add("flex");
-            video.muted = false;
 
             if (isYes) {
                 title.innerText = "❤️ Vibe Approved: Yapapa Cat Summoned!";
-                title.className = "text-xl font-black text-emerald-400 tracking-tight text-center mb-4";
-                // URL Encoded target targeting the long file name layout exactly
+                title.className = "text-md font-black text-emerald-400 tracking-tight text-center mb-4";
                 video.src = "vidssave.com%20The%20Original%20'Yapapa%20Ummm,%20Yapapa%20Haane%E2%80%99%20New%20cat%20meme%20unlocked!%201080p.mp4";
             } else {
                 title.innerText = "🚨 ACCESS DENIED: CHAOS ALARM!";
-                title.className = "text-xl font-black text-red-500 tracking-tight text-center mb-4";
-                // URL Encoded target mapping matching your uploaded German cat file perfectly
+                title.className = "text-md font-black text-red-500 tracking-tight text-center mb-4";
                 video.src = "vidssave.com%20german%20cat%20speech%20240P.mp4";
             }
 
             video.currentTime = 0;
-            video.play().catch(e => console.log("Autoplay paused, awaiting gesture interface metrics."));
+            video.play().catch(e => console.log("Autoplay check intercepted."));
         }
 
         function summonCat() {
@@ -348,43 +352,42 @@
             document.getElementById("excuseBox").innerText = excuses[Math.floor(Math.random() * excuses.length)];
         }
 
-        function hunger() {
-            playAudioTone(300, 0.12);
-            const level = Math.floor(Math.random() * 100);
-            const box = document.getElementById("hungerBox");
-            if (level > 80) {
-                box.innerText = "🚨 SOCIAL BATTERY ZERO. IMMEDIATE EVACUATION ORDERED.";
-                box.className = "mt-4 text-xl font-bold text-red-500";
-            } else if (level > 50) {
-                box.innerText = "🫣 Moderately overwhelmed: Needs coffee alone in a quiet room.";
-                box.className = "mt-4 text-xl font-bold text-orange-400";
-            } else {
-                box.innerText = "😌 Safe Zone: Sitting in the corner checking phone with 0 eye contact.";
-                box.className = "mt-4 text-xl font-bold text-green-400";
-            }
-        }
-
+        // Runaway escape button engine logic
         const btn = document.getElementById("runBtn");
         const zone = document.getElementById("complimentZone");
 
-        btn.addEventListener('mouseover', () => {
-            playAudioTone(450, 0.04);
-            const maxW = zone.clientWidth - btn.clientWidth - 32;
-            const maxH = zone.clientHeight - btn.clientHeight - 64;
+        zone.addEventListener('mousemove', (e) => {
+            const btnRect = btn.getBoundingClientRect();
+            const zoneRect = zone.getBoundingClientRect();
             
-            const randX = Math.max(16, Math.floor(Math.random() * maxW));
-            const randH = Math.max(16, Math.floor(Math.random() * maxH)) + 40;
+            // Vector proximity bounds
+            const mouseX = e.clientX - zoneRect.left;
+            const mouseY = e.clientY - zoneRect.top;
+            
+            const btnCenterX = btn.offsetLeft + btnRect.width / 2;
+            const btnCenterY = btn.offsetTop + btnRect.height / 2;
+            
+            const distance = Math.hypot(mouseX - btnCenterX, mouseY - btnCenterY);
+            
+            if (distance < 75) {
+                playAudioTone(450, 0.03);
+                const maxW = zone.clientWidth - btnRect.width - 24;
+                const maxH = zone.clientHeight - btnRect.height - 56;
+                
+                const randX = Math.max(12, Math.floor(Math.random() * maxW));
+                const randY = Math.max(12, Math.floor(Math.random() * maxH)) + 36;
 
-            btn.style.left = randX + "px";
-            btn.style.top = randH + "px";
-            btn.innerText = "Anxiety triggered, ran away! 🏃‍♂️";
+                btn.style.left = randX + "px";
+                btn.style.top = randY + "px";
+                btn.innerText = "Anxiety triggered, ran away! 🏃‍♂️";
+            }
         });
 
         function destroy() {
             document.body.innerHTML = `
                 <div class="flex flex-col items-center justify-center min-h-screen text-center p-6 bg-black text-orange-500 font-sans">
-                    <h1 class="text-6xl font-black tracking-tighter uppercase mb-4 animate-bounce">🚪 SOCIAL ESCAPE COMPLETE </h1>
-                    <h2 class="text-2xl font-bold text-white max-w-xl">Lohitha successfully shut down the server, locked the door, and went to eat Biryani in peace. No further eye contact permitted.</h2>
+                    <h1 class="text-5xl font-black tracking-tighter uppercase mb-4 animate-bounce">🚪 ISOLATION SYSTEM STABLE </h1>
+                    <h2 class="text-xl font-bold text-white max-w-xl">Lohitha successfully shut down the communications server, locked the workspace windows, and went to eat Biryani alone. Further contact drops rejected.</h2>
                 </div>
             `;
         }
