@@ -15,26 +15,35 @@
 <body class="text-slate-100 min-h-screen px-4 py-6 md:py-12 flex flex-col items-center justify-center font-sans selection:bg-pink-500 selection:text-white">
 
     <!-- MAIN CANVA-INSPIRED STACK CONTAINER -->
-    <div class="w-full max-w-2xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-xl rounded-3xl shadow-2xl p-6 md:p-10 min-h-[520px] flex flex-col justify-between relative overflow-hidden">
+    <div class="w-full max-w-2xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-xl rounded-3xl shadow-2xl p-6 md:p-10 min-h-[550px] flex flex-col justify-between relative overflow-hidden">
         
-        <!-- PAGE 1: Welcome Cover Page -->
+        <!-- PAGE 1: Welcome Cover Page with Her Real Photo Gallery -->
         <div id="page1" class="vibe-page flex flex-col justify-between flex-1">
             <div class="text-center text-[11px] font-bold text-slate-500 uppercase tracking-widest border-b border-slate-800/60 pb-3">
-                Slide 01 // Introduction
+                Slide 01 // Welcome Node
             </div>
             
-            <div class="my-auto text-center py-6">
-                <span class="text-4xl md:text-5xl mb-4 block">👑</span>
+            <div class="my-auto text-center py-4">
+                <!-- Premium Dynamic Photo Frame Mirror -->
+                <div class="w-52 h-52 mx-auto rounded-full overflow-hidden border-4 border-orange-500/30 bg-slate-950 shadow-2xl relative mb-6">
+                    <img id="coverPhoto" src="6ac983fb-89c7-485e-8da8-7c1a26d6a01a.jpg" class="w-full h-full object-cover transition-all duration-500 animate-pulse" alt="Lohitha Spotlight">
+                </div>
+                
                 <h1 class="text-4xl md:text-5xl font-black tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-orange-400 via-rose-400 to-amber-400 leading-tight">
                     Happy Birthday, Lohitha!
                 </h1>
-                <p class="text-slate-300 font-medium text-sm md:text-base mt-4 max-w-md mx-auto leading-relaxed">
-                    Welcome to your official premium birthday slide deck space. Click through the pages below to answer a few highly critical validation questions. ✨
+                <p class="text-slate-300 font-medium text-xs md:text-sm mt-3 max-w-md mx-auto leading-relaxed">
+                    Welcome to your premium birthday slide deck. We have locked down the framework. You are required to pass through these unskippable bestie telemetry parameters to finish the verification. ✨
                 </p>
+                
+                <!-- Quick Cycle Gallery Button directly on main screen -->
+                <button onclick="cycleCoverPhoto()" class="mt-4 bg-slate-800/60 hover:bg-slate-700 text-slate-300 font-bold px-4 py-1.5 rounded-xl text-[11px] tracking-wider border border-slate-700/50 cursor-pointer transition">
+                    🔄 Cycle Photo Viewports
+                </button>
             </div>
 
             <div class="text-center text-[10px] text-slate-500 font-bold tracking-wider uppercase">
-                Click Next Page to Begin the Deck
+                Click Next Page to Begin Validation Checks
             </div>
         </div>
 
@@ -92,16 +101,95 @@
             </div>
         </div>
 
-        <!-- PAGE 4: Question 3 - The Ultimate Target Gateway Checkpoint -->
+        <!-- PAGE 4: Trap Question 3 - Friend Phone Number -->
         <div id="page4" class="vibe-page hidden flex flex-col justify-between flex-1">
+            <div class="text-center text-[11px] font-bold text-slate-500 uppercase tracking-widest border-b border-slate-800/60 pb-3">
+                Slide 04 // Contact Sync Trap
+            </div>
+
+            <div class="my-auto text-center py-6">
+                <span class="text-3xl mb-3 block">📲</span>
+                <h2 class="text-2xl font-extrabold text-white tracking-tight">Question 3: Security Gateway</h2>
+                <p class="text-slate-400 text-xs mt-1 mb-8">Data sync protocol required to pull down system firewalls.</p>
+                
+                <h3 class="text-xl font-black text-slate-200 mb-6 px-4">"Will you give me your friend's phone number?"</h3>
+                
+                <div class="flex flex-col sm:flex-row justify-center gap-4 max-w-xs mx-auto">
+                    <button onclick="selectPhone('ofc')" class="flex-1 bg-slate-800/80 hover:bg-violet-600/20 hover:border-violet-500/40 border border-slate-700/60 font-black py-3.5 rounded-xl transition active:scale-95 text-xs tracking-wider cursor-pointer uppercase text-violet-400">
+                        Yes, ofc! 🤝
+                    </button>
+                    <button onclick="selectPhone('yes')" class="flex-1 bg-slate-800/80 hover:bg-violet-600/20 hover:border-violet-500/40 border border-slate-700/60 font-black py-3.5 rounded-xl transition active:scale-95 text-xs tracking-wider cursor-pointer uppercase text-pink-400">
+                        Yes 🙂
+                    </button>
+                </div>
+                <p id="phoneResponse" class="text-xs font-bold text-violet-400 mt-6 h-4 text-center px-4"></p>
+            </div>
+        </div>
+
+        <!-- PAGE 5: Funny Bestie Trap 4 - Who is the cooler bestie? -->
+        <div id="page5" class="vibe-page hidden flex flex-col justify-between flex-1">
+            <div class="text-center text-[11px] font-bold text-slate-500 uppercase tracking-widest border-b border-slate-800/60 pb-3">
+                Slide 05 // Closeness Audit
+            </div>
+
+            <div class="my-auto text-center py-6">
+                <span class="text-3xl mb-3 block">👑</span>
+                <h2 class="text-2xl font-extrabold text-white tracking-tight">Question 4: Rank Indexing</h2>
+                <p class="text-slate-400 text-xs mt-1 mb-8">Evaluate internal memory allocation channels immediately.</p>
+                
+                <h3 class="text-xl font-black text-slate-200 mb-6 px-4">"Who is officially your coolest, most iconic favorite bestie?"</h3>
+                
+                <div class="flex flex-col gap-3 max-w-xs mx-auto relative h-32" id="bestieZone">
+                    <button onclick="selectBestie('you')" class="w-full bg-slate-800/80 hover:bg-pink-600/20 hover:border-pink-500/40 border border-slate-700/60 font-black py-3 rounded-xl text-xs tracking-wide cursor-pointer text-center text-pink-400">
+                        Obviously You 🏆
+                    </button>
+                    <!-- This button shifts when targeted because nobody is allowed to tap it -->
+                    <button id="wrongBestieBtn" class="absolute w-full bg-slate-800/80 border border-slate-700/60 font-black py-3 rounded-xl text-xs tracking-wide text-slate-500 cursor-default transition-all duration-100 ease-out whitespace-nowrap" style="bottom: 12px; left: 0;">
+                        Someone Else ❌
+                    </button>
+                </div>
+                <p id="bestieResponse" class="text-xs font-bold text-pink-400 mt-4 h-4"></p>
+            </div>
+        </div>
+
+        <!-- PAGE 6: Funny Bestie Trap 5 - Text Reply Target -->
+        <div id="page6" class="vibe-page hidden flex flex-col justify-between flex-1">
+            <div class="text-center text-[11px] font-bold text-slate-500 uppercase tracking-widest border-b border-slate-800/60 pb-3">
+                Slide 06 // Response Latency
+            </div>
+
+            <div class="my-auto text-center py-6">
+                <span class="text-3xl mb-3 block">📲</span>
+                <h2 class="text-2xl font-extrabold text-white tracking-tight">Question 5: Message Buffering</h2>
+                <p class="text-slate-400 text-xs mt-1 mb-8">Confirming text response timeline behaviors:</p>
+                
+                <h3 class="text-xl font-black text-slate-200 mb-6 px-4">"When I text you, why does it take 3 business days to reply?"</h3>
+                
+                <div class="flex flex-col gap-3 max-w-sm mx-auto">
+                    <button onclick="selectReply('anxiety')" class="w-full bg-slate-800/80 hover:bg-cyan-600/20 hover:border-cyan-500/40 text-slate-200 font-semibold py-3 px-4 rounded-xl text-xs border border-slate-700/60 cursor-pointer transition text-left">
+                        🫣 Social anxiety hit and I typed 40 draft versions
+                    </button>
+                    <button onclick="selectReply('scenarios')" class="w-full bg-slate-800/80 hover:bg-cyan-600/20 hover:border-cyan-500/40 text-slate-200 font-semibold py-3 px-4 rounded-xl text-xs border border-slate-700/60 cursor-pointer transition text-left">
+                        💭 I was busy building 14 fake scenarios in my head
+                    </button>
+                    <button onclick="selectReply('biryani')" class="w-full bg-slate-800/80 hover:bg-cyan-600/20 hover:border-cyan-500/40 text-slate-200 font-semibold py-3 px-4 rounded-xl text-xs border border-slate-700/60 cursor-pointer transition text-left">
+                        🍛 Eating spicy Biryani and completely zoned out
+                    </button>
+                </div>
+                <p id="replyResponse" class="text-xs font-bold text-cyan-400 mt-4 h-4 text-center"></p>
+            </div>
+        </div>
+
+        <!-- PAGE 7: Question 6 - The Ultimate Relationship Test Checkpoint -->
+        <div id="page7" class="vibe-page hidden flex flex-col justify-between flex-1">
             <div class="text-center text-[11px] font-bold text-purple-400 uppercase tracking-widest border-b border-purple-900/30 pb-3">
-                Slide 04 // Validation Gateway
+                Slide 07 // Final Gateway Check
             </div>
 
             <div class="my-auto text-center py-6">
                 <span class="text-3xl mb-3 block">🫣</span>
-                <h2 class="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400 tracking-tight">Question 3: Core Validation Check</h2>
-                <p class="text-slate-400 text-xs mt-1 mb-8">Introvert secure configuration. Response profile will dictate video playback metrics.</p>
+                <h2 class="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400 tracking-tight">Question 6: Relationship Audit</h2>
+                <p class="text-slate-400 text-xs mt-1 mb-8">Final terminal barrier node. Response profile will instantly command custom cat parameters.</p>
                 
                 <h3 class="text-xl font-extrabold text-white mb-6">"Do you like me?"</h3>
                 
@@ -112,22 +200,22 @@
             </div>
         </div>
 
-        <!-- PAGE 5: Birthday Celebration Outro -->
-        <div id="page5" class="vibe-page hidden flex flex-col justify-between flex-1">
+        <!-- PAGE 8: Birthday Celebration Outro -->
+        <div id="page8" class="vibe-page hidden flex flex-col justify-between flex-1">
             <div class="text-center text-[11px] font-bold text-slate-500 uppercase tracking-widest border-b border-slate-800/60 pb-3">
-                Slide 05 // Closing Deck
+                Slide 08 // Closing Deck
             </div>
 
             <div class="my-auto text-center py-6 relative">
                 <span class="text-4xl mb-3 block">🎉</span>
                 <h2 class="text-3xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-amber-500">Lohitha Supremacy Confirmed</h2>
                 <p class="text-slate-300 text-xs font-semibold mt-2 max-w-sm mx-auto leading-relaxed">
-                    All question metrics logged successfully. Have an amazing year causing chaotic scenarios! 🍕
+                    All core metrics locked into system registry. Have a phenomenal year causing unfiltered chaos across the state! 🍕
                 </p>
 
                 <!-- Secure Runaway Protection Button Box -->
                 <div id="complimentZone" class="mt-8 border border-slate-800/80 bg-slate-950/30 rounded-2xl p-4 h-24 relative overflow-hidden flex flex-col justify-between items-start">
-                    <span class="text-[9px] font-bold text-slate-500 uppercase tracking-wider block">Anxiety Protection Layer</span>
+                    <span class="text-[9px] font-bold text-slate-500 uppercase tracking-wider block">Anxiety Protection Shield Layer</span>
                     <button id="runBtn" class="absolute bg-gradient-to-r from-orange-500 to-rose-600 font-extrabold text-white text-[10px] px-3.5 py-2 rounded-lg shadow-md cursor-pointer transition-all duration-100 ease-out whitespace-nowrap z-20" style="left: 16px; bottom: 16px;">
                         Click to Collect Compliment 🏆
                     </button>
@@ -171,8 +259,21 @@
 
     <script>
         let activePageIdx = 0;
+        let imageIndex = 0;
         const pages = document.querySelectorAll('.vibe-page');
         const deckIndicatorsContainer = document.getElementById('deckIndicators');
+
+        // Main User Repository Filename Matrix Map
+        const images = [
+            "6ac983fb-89c7-485e-8da8-7c1a26d6a01a.jpg",
+            "2b4cb790-92a8-4fc4-9def-09c05ab4b9b8.jpg",
+            "67cd165b-8bd8-43e4-a4cc-b9a3c3958a0b.jpg",
+            "0eee80a5-0865-48f2-8ec7-faa523db5622.jpg",
+            "d42034cd-e556-4367-bc8e-852894ee885f.jpg",
+            "7e74a0c9-9435-4583-901b-fdd1eb12f117.jpg",
+            "576235ba-0b25-4a20-95e9-bf2db1c3ff96.jpg",
+            "e4c0cb90-958f-4377-81f3-9c0687eeaa6e.jpg"
+        ];
 
         // Dynamically configure presentation dot lines matching active layout bounds
         pages.forEach((_, idx) => {
@@ -202,28 +303,41 @@
             renderPage();
         }
 
-        // Drop interactive answers configurations
+        // Custom Cover Photo Rotator Selector
+        function cycleCoverPhoto() {
+            imageIndex = (imageIndex + 1) % images.length;
+            document.getElementById("coverPhoto").src = images[imageIndex];
+        }
+
+        // Response Triggers
         function selectFood(type) {
             const resp = document.getElementById('foodResponse');
             if(type === 'biryani') {
                 resp.innerText = "🍛 Correct! Authentic heavy spice baseline metrics initialized.";
-                resp.className = "text-xs font-bold text-orange-400 mt-4 h-4";
             } else if (type === 'bajji') {
                 resp.innerText = "🌶️ Approved! Local Andhra street food radar online.";
-                resp.className = "text-xs font-bold text-amber-400 mt-4 h-4";
             } else {
                 resp.innerText = "❌ Denied. Bubble Tea tracking block tripped!";
-                resp.className = "text-xs font-bold text-red-500 mt-4 h-4";
             }
         }
 
         function selectCoffee(type) {
             const resp = document.getElementById('coffeeResponse');
             if(type === 'strong') {
-                resp.innerText = "☕ Fuel accepted. Commencing active timeline updates.";
+                resp.innerText = "☕ Fuel accepted. Filter coffee engine online.";
             } else {
-                resp.innerText = "💭 Critical: Opening 45 new scenario loops right now!";
+                resp.innerText = "💭 Critical: Opening 45 new overthinking loops right now!";
             }
+        }
+
+        function selectPhone(choice) {
+            const resp = document.getElementById('phoneResponse');
+            resp.innerText = "📲 Target locked. Downloading friend list configuration logs... 😂";
+        }
+
+        function selectReply(reason) {
+            const resp = document.getElementById('replyResponse');
+            resp.innerText = "⏳ Log verified: This matches your active telemetry footprint.";
         }
 
         function answerQuestion(isYes) {
@@ -247,7 +361,7 @@
 
             video.currentTime = 0;
             video.load();
-            video.play().catch(e => console.log("Autoplay check intercepted. Controls bound."));
+            video.play().catch(e => console.log("Gesture check bypassed."));
         }
 
         function closeCat() {
@@ -259,7 +373,7 @@
             modal.classList.remove("flex");
         }
 
-        // Runaway Button pointer matrix controls inside Slide 5 context parameters
+        // Runaway Button pointer matrix controls inside slide 8 context parameters
         const btn = document.getElementById("runBtn");
         const zone = document.getElementById("complimentZone");
 
@@ -288,11 +402,41 @@
             }
         });
 
+        // Wrong Bestie Runaway Trap Logic inside Slide 5 context parameters
+        const wrongBtn = document.getElementById("wrongBestieBtn");
+        const bZone = document.getElementById("bestieZone");
+
+        bZone.addEventListener('mousemove', (e) => {
+            const btnRect = wrongBtn.getBoundingClientRect();
+            const zoneRect = bZone.getBoundingClientRect();
+            
+            const mouseX = e.clientX - zoneRect.left;
+            const mouseY = e.clientY - zoneRect.top;
+            
+            const btnCenterX = wrongBtn.offsetLeft + btnRect.width / 2;
+            const btnCenterY = wrongBtn.offsetTop + btnRect.height / 2;
+            
+            const distance = Math.hypot(mouseX - btnCenterX, mouseY - btnCenterY);
+            
+            if (distance < 60) {
+                const maxW = bZone.clientWidth - btnRect.width - 16;
+                const maxH = bZone.clientHeight - btnRect.height - 24;
+                
+                const randX = Math.floor(Math.random() * maxW);
+                const randY = Math.floor(Math.random() * maxH);
+
+                wrongBtn.style.left = randX + "px";
+                wrongBtn.style.top = randY + "px";
+                wrongBtn.innerText = "Error: Invalid Choice! 🏃‍♂️";
+                document.getElementById('bestieResponse').innerText = "⚠️ System locked choice to 'Obviously You'.";
+            }
+        });
+
         function destroy() {
             document.body.innerHTML = `
                 <div class="flex flex-col items-center justify-center min-h-screen text-center p-6 bg-black text-orange-500 font-sans">
                     <h1 class="text-4xl font-black tracking-tighter uppercase mb-4 animate-bounce">🚪 PRESENTATION SUSPENDED </h1>
-                    <h2 class="text-md font-bold text-white max-w-xl px-4 leading-relaxed">Lohitha successfully left the presentation loop, closed the layout deck, and went to get filter coffee alone. No further social interactions authorized.</h2>
+                    <h2 class="text-md font-bold text-white max-w-xl px-4 leading-relaxed">Lohitha successfully left the presentation loop, closed the layout deck, and went to eat Biryani alone. No further social interactions authorized.</h2>
                 </div>
             `;
         }
