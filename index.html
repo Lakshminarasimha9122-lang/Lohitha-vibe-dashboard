@@ -24,177 +24,179 @@
         }
     </style>
 </head>
-<body class="text-slate-100 min-h-screen px-4 py-8 md:py-12 flex flex-col items-center selection:bg-orange-500 selection:text-white">
+<body class="text-slate-100 min-h-screen px-4 py-8 flex flex-col items-center justify-between selection:bg-orange-500 selection:text-white font-sans">
 
-    <div class="w-full max-w-5xl flex flex-col gap-6">
+    <div id="statusBanner" class="hidden w-full max-w-4xl bg-slate-900/80 border border-orange-500/30 text-center text-sm font-bold p-4 rounded-xl text-orange-400 animate-pulse mb-4"></div>
+
+    <div class="w-full max-w-4xl bg-slate-900/20 border border-slate-800/60 backdrop-blur-md rounded-3xl shadow-2xl p-6 md:p-8 flex-1 flex flex-col justify-between min-h-[580px] relative">
         
-        <!-- Header Section -->
-        <header class="flex flex-col md:flex-row justify-between items-center bg-slate-900/40 border border-slate-800/80 backdrop-blur-md rounded-2xl p-6 gap-4">
-            <div>
-                <h1 id="title" class="text-3xl md:text-4xl font-black tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-orange-400 via-rose-400 to-amber-500">
+        <div id="page1" class="vibe-page flex flex-col justify-between flex-1">
+            <div class="flex justify-between items-center border-b border-slate-800 pb-4">
+                <span class="text-xs font-bold text-slate-500 uppercase tracking-widest">Page 01 // Cover Node</span>
+                <span class="text-xs bg-slate-800 text-slate-400 font-bold px-3 py-1 rounded-full border border-slate-700/50">v1.4.2</span>
+            </div>
+            
+            <div class="my-auto text-center py-8">
+                <h1 id="title" class="text-4xl md:text-6xl font-black tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-orange-400 via-rose-400 to-amber-500 leading-tight">
                     Lohitha Supremacy Workspace
                 </h1>
-                <p class="text-slate-400 text-xs mt-1 font-medium tracking-wide uppercase">Core Node System // Reality Telemetry Profile</p>
-            </div>
-            <div class="flex flex-wrap gap-2">
-                <button onclick="chaosMode()" class="bg-red-950/60 hover:bg-red-900/80 text-red-400 border border-red-900/60 font-bold px-4 py-2 rounded-xl text-xs transition active:scale-95 cursor-pointer">
-                    🚨 Chaos Mod
-                </button>
-                <button onclick="coolMode()" class="bg-amber-950/60 hover:bg-amber-900/80 text-amber-400 border border-amber-900/60 font-bold px-4 py-2 rounded-xl text-xs transition active:scale-95 cursor-pointer">
-                    ☕ Coffee Infusion
-                </button>
-            </div>
-        </header>
-
-        <div id="statusBanner" class="hidden bg-slate-900/80 border border-orange-500/30 text-center text-sm font-bold p-4 rounded-xl text-orange-400 animate-pulse"></div>
-
-        <!-- BENTO GRID -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            
-            <!-- CARD 1: Image Carousel -->
-            <div class="md:col-span-2 bg-slate-900/30 border border-slate-800/80 rounded-3xl p-6 flex flex-col justify-between shadow-xl relative overflow-hidden backdrop-blur-sm min-h-[460px]">
-                <div class="flex justify-between items-center mb-4">
-                    <span class="text-[11px] font-bold text-slate-500 uppercase tracking-widest">01 // Frame Carousel</span>
-                    <span class="text-xs bg-slate-800 text-slate-400 font-semibold px-2.5 py-1 rounded-full border border-slate-700/50">Live Sync</span>
-                </div>
-                
-                <div class="flex-1 flex flex-col items-center justify-center py-4">
-                    <div class="w-72 h-72 rounded-2xl overflow-hidden border-2 border-orange-500/30 bg-slate-950 shadow-2xl relative">
-                        <img id="photo" src="6ac983fb-89c7-485e-8da8-7c1a26d6a01a.jpg" class="w-full h-full object-cover transition-all duration-300">
-                    </div>
-                    <p id="caption" class="text-lg font-black mt-4 text-center tracking-tight text-orange-400 bg-slate-950/50 px-4 py-1.5 rounded-xl border border-slate-800/60">
-                        🎯 Current Vibe State: Elite Configuration
-                    </p>
-                </div>
-
-                <div class="flex justify-center gap-3 mt-2">
-                    <button onclick="prevSlide()" class="bg-slate-800/80 hover:bg-slate-700 text-slate-200 font-bold px-4 py-2 rounded-xl text-xs transition active:scale-95 cursor-pointer border border-slate-700/60">
-                        ◀ Previous
-                    </button>
-                    <button onclick="nextSlide()" class="bg-slate-800/80 hover:bg-slate-700 text-slate-200 font-bold px-4 py-2 rounded-xl text-xs transition active:scale-95 cursor-pointer border border-slate-700/60">
-                        Next Slide ▶
-                    </button>
+                <p class="text-slate-400 font-medium text-sm md:text-base mt-2 max-w-lg mx-auto leading-relaxed">
+                    An authentic premium telemetry portfolio tracking local AP junk food logs, real-time overthinking frequencies, and introvert matrices.
+                </p>
+                <div class="mt-8 flex justify-center gap-3">
+                    <button onclick="chaosMode()" class="bg-red-950/40 hover:bg-red-900/60 text-red-400 border border-red-900/40 font-bold px-5 py-2.5 rounded-xl text-xs tracking-wider uppercase cursor-pointer transition">🚨 Chaos Mode</button>
+                    <button onclick="coolMode()" class="bg-amber-950/40 hover:bg-amber-900/60 text-amber-400 border border-amber-900/40 font-bold px-5 py-2.5 rounded-xl text-xs tracking-wider uppercase cursor-pointer transition">☕ Coffee Boost</button>
                 </div>
             </div>
 
-            <!-- CARD 2: Interactive Checkpoint Card -->
-            <div class="bg-gradient-to-b from-slate-900/60 to-purple-950/20 border border-purple-500/30 rounded-3xl p-6 flex flex-col justify-between shadow-xl backdrop-blur-sm">
-                <div>
-                    <span class="text-[11px] font-bold text-purple-400 uppercase tracking-widest block mb-4">02 // Decision Node</span>
-                    <h2 class="text-2xl font-black text-white tracking-tight leading-snug">Emotional Validation Checkpoint</h2>
-                    <p class="text-slate-400 text-xs mt-1.5">Provide immediate honest metric logs regarding configuration variables.</p>
-                </div>
-                
-                <div class="py-6 text-center">
-                    <p class="text-xl font-extrabold text-slate-100 tracking-tight">"Do you like me?"</p>
-                </div>
-
-                <div class="grid grid-cols-2 gap-3">
-                    <button onclick="answerQuestion(true)" class="bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-400 border border-emerald-500/30 font-bold py-3 rounded-xl transition active:scale-95 text-xs tracking-wider cursor-pointer">
-                        YES 👍
-                    </button>
-                    <button onclick="answerQuestion(false)" class="bg-rose-600/20 hover:bg-rose-600/30 text-rose-400 border border-rose-500/30 font-bold py-3 rounded-xl transition active:scale-95 text-xs tracking-wider cursor-pointer">
-                        NO 👎
-                    </button>
-                </div>
-            </div>
-
-            <!-- CARD 3: Analytics Row Widgets -->
-            <div class="md:col-span-3 grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="bg-slate-900/30 border border-slate-800/80 p-4 rounded-2xl shadow-md">
-                    <span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">Dietary Profile</span>
-                    <p class="text-lg font-black text-orange-400 mt-1">Biryani &amp; Bajji</p>
-                </div>
-                <div class="bg-slate-900/30 border border-slate-800/80 p-4 rounded-2xl shadow-md">
-                    <span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">Beverage Engine</span>
-                    <p class="text-lg font-black text-amber-500 mt-1">Normal Coffee</p>
-                </div>
-                <div class="bg-slate-900/30 border border-slate-800/80 p-4 rounded-2xl shadow-md">
-                    <span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">Overthinking Memory</span>
-                    <p class="text-lg font-black text-red-400 mt-1">48,291 Threads</p>
-                </div>
-                <div class="bg-slate-900/30 border border-slate-800/80 p-4 rounded-2xl shadow-md">
-                    <span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">Social Battery</span>
-                    <p class="text-lg font-black text-cyan-400 mt-1">100% Introvert</p>
-                </div>
-            </div>
-
-            <!-- CARD 4: Interactive Script Action Boxes -->
-            <div class="bg-slate-900/30 border border-slate-800/80 rounded-3xl p-6 flex flex-col justify-between backdrop-blur-sm shadow-xl min-h-[220px]">
-                <div>
-                    <span class="text-[11px] font-bold text-slate-500 uppercase tracking-widest block mb-2">03 // Food Audit</span>
-                    <h3 class="text-xl font-black text-slate-200 tracking-tight">AP Junk Food Radar</h3>
-                    <p id="analysis" class="text-slate-400 text-sm mt-2 font-medium">Awaiting manual kitchen synchronization requests...</p>
-                </div>
-                <button onclick="analyze()" class="bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs py-2.5 rounded-xl border border-slate-700 transition active:scale-95 cursor-pointer w-full text-center tracking-wide">
-                    Scan Kitchen Logs
-                </button>
-            </div>
-
-            <div class="bg-slate-900/30 border border-slate-800/80 rounded-3xl p-6 flex flex-col justify-between backdrop-blur-sm shadow-xl min-h-[220px]">
-                <div>
-                    <span class="text-[11px] font-bold text-slate-500 uppercase tracking-widest block mb-2">04 // Logic Game</span>
-                    <h3 class="text-xl font-black text-slate-200 tracking-tight">Brain Slot Machine</h3>
-                    <div id="slot" class="text-3xl font-extrabold text-center py-1 tracking-widest text-amber-500 drop-shadow-md">🎲 🎲 🎲</div>
-                </div>
-                <button onclick="spin()" class="bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs py-2.5 rounded-xl border border-slate-700 transition active:scale-95 cursor-pointer w-full text-center tracking-wide">
-                    Spin Brain Cells
-                </button>
-            </div>
-
-            <div class="bg-slate-900/30 border border-slate-800/80 rounded-3xl p-6 flex flex-col justify-between backdrop-blur-sm shadow-xl min-h-[220px]">
-                <div>
-                    <span class="text-[11px] font-bold text-slate-500 uppercase tracking-widest block mb-2">05 // State Generator</span>
-                    <h3 class="text-xl font-black text-slate-200 tracking-tight">Anxiety Thought Tracker</h3>
-                    <p id="excuseBox" class="text-slate-400 text-xs mt-2 font-medium leading-relaxed">Processing social scenarios from 2019...</p>
-                </div>
-                <button onclick="excuse()" class="bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs py-2.5 rounded-xl border border-slate-700 transition active:scale-95 cursor-pointer w-full text-center tracking-wide">
-                    Analyze Thoughts
-                </button>
-            </div>
-
-            <!-- Credentials Frame -->
-            <div class="md:col-span-2 bg-slate-900/30 border border-slate-800/80 rounded-3xl p-6 shadow-xl backdrop-blur-sm">
-                <span class="text-[11px] font-bold text-slate-500 uppercase tracking-widest block mb-4">06 // System Credentials</span>
-                <h3 class="text-xl font-black text-slate-200 tracking-tight mb-3">Verified Matrix Log Badges</h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-semibold text-slate-300">
-                    <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800/60 flex items-center gap-2">🏅 Tomato Bajji Connoisseur</div>
-                    <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800/60 flex items-center gap-2">🏅 Anti-Bubble Tea Coalition Member</div>
-                    <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800/60 flex items-center gap-2">🏅 S-Tier Biryani Quality Analyst</div>
-                    <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800/60 flex items-center gap-2">🏅 Scenario Architect (Overthinking)</div>
-                    <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800/60 flex items-center gap-2">🏅 3-Business-Day Reply Specialist</div>
-                    <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800/60 flex items-center gap-2">🏅 Professional "Will Stay Home" Node</div>
-                </div>
-            </div>
-
-            <!-- CARD 6: Interactive Runaway Button Area -->
-            <div id="complimentZone" class="bg-slate-900/30 border border-slate-800/80 rounded-3xl p-6 flex flex-col justify-between shadow-xl relative overflow-hidden backdrop-blur-sm min-h-[220px]">
-                <div>
-                    <span class="text-[11px] font-bold text-slate-500 uppercase tracking-widest block mb-1">07 // Escape Matrix</span>
-                    <h3 class="text-xl font-black text-slate-200 tracking-tight">Compliment Reloader</h3>
-                    <p class="text-slate-400 text-xs mt-1">Zero eye contact required. Completely introvert secure.</p>
-                </div>
-                
-                <div class="relative h-16 w-full">
-                    <button id="runBtn" class="absolute bg-gradient-to-r from-orange-500 to-rose-600 font-extrabold text-white text-xs px-4 py-2.5 rounded-xl shadow-lg transition-all duration-100 ease-out whitespace-nowrap cursor-pointer z-20" style="left: 0px; bottom: 0px;">
-                        Click to Compliment safely 🏆
-                    </button>
-                </div>
-            </div>
-
+            <div class="text-center text-xs text-slate-500 font-semibold tracking-wider uppercase">Scroll Matrix or Use Page Nav Center</div>
         </div>
 
-        <!-- Footer System -->
-        <footer class="bg-slate-900/20 border border-slate-900 text-center p-4 rounded-xl flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-slate-500 font-semibold mb-12">
-            <span>Core Diagnostics Status: Online // Active</span>
-            <button onclick="destroy()" class="text-red-500/70 hover:text-red-400 font-bold cursor-pointer uppercase tracking-wider text-[11px]">
-                💣 Initialize Isolation Sequence
+        <div id="page2" class="vibe-page hidden flex flex-col justify-between flex-1">
+            <div class="flex justify-between items-center border-b border-slate-800 pb-4">
+                <span class="text-xs font-bold text-slate-500 uppercase tracking-widest">Page 02 // Asset Carousel</span>
+                <span class="text-xs bg-slate-800 text-emerald-400 border border-emerald-900/50 font-bold px-3 py-1 rounded-full">Live Sync</span>
+            </div>
+
+            <div class="flex-1 flex flex-col items-center justify-center py-6">
+                <div class="w-64 h-64 md:w-72 md:h-72 rounded-2xl overflow-hidden border-2 border-orange-500/30 bg-slate-950 shadow-2xl relative">
+                    <img id="photo" src="6ac983fb-89c7-485e-8da8-7c1a26d6a01a.jpg" class="w-full h-full object-cover transition-all duration-300">
+                </div>
+                <p id="caption" class="text-base font-black mt-4 text-center tracking-tight text-orange-400 bg-slate-950/50 px-4 py-2 rounded-xl border border-slate-800/60">
+                    🎯 Current Vibe State: Elite Configuration
+                </p>
+                
+                <div class="flex gap-3 mt-4">
+                    <button onclick="prevSlide()" class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold px-4 py-1.5 rounded-xl text-xs cursor-pointer border border-slate-700/60 transition">◀ Prev</button>
+                    <button onclick="nextSlide()" class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold px-4 py-1.5 rounded-xl text-xs cursor-pointer border border-slate-700/60 transition">Next ▶</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="page3" class="vibe-page hidden flex flex-col justify-between flex-1">
+            <div class="flex justify-between items-center border-b border-slate-800 pb-4">
+                <span class="text-xs font-bold text-purple-400 uppercase tracking-widest">Page 03 // Validation Gateway</span>
+                <span class="text-xs bg-purple-950/40 text-purple-300 border border-purple-900/50 px-3 py-1 rounded-full font-bold">Secure Core</span>
+            </div>
+
+            <div class="my-auto text-center py-8">
+                <h2 class="text-3xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400 mb-2">Core Question Checkpoint</h2>
+                <p class="text-slate-400 text-xs font-semibold max-w-sm mx-auto leading-relaxed">Provide immediate telemetry data confirmation regarding the target parameters.</p>
+                
+                <h3 class="text-2xl font-black text-white mt-8 mb-8 tracking-tight">"Do you like me?"</h3>
+                
+                <div class="flex justify-center gap-4 max-w-xs mx-auto">
+                    <button onclick="answerQuestion(true)" class="flex-1 bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-400 border border-emerald-500/30 font-bold py-3.5 rounded-xl transition active:scale-95 text-xs tracking-widest cursor-pointer uppercase">YES 👍</button>
+                    <button onclick="answerQuestion(false)" class="flex-1 bg-rose-600/20 hover:bg-rose-600/30 text-rose-400 border border-rose-500/30 font-bold py-3.5 rounded-xl transition active:scale-95 text-xs tracking-widest cursor-pointer uppercase">NO 👎</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="page4" class="vibe-page hidden flex flex-col justify-between flex-1">
+            <div class="flex justify-between items-center border-b border-slate-800 pb-4 mb-4">
+                <span class="text-xs font-bold text-slate-500 uppercase tracking-widest">Page 04 // Analytics Deck</span>
+                <span class="text-xs bg-slate-800 text-slate-400 font-bold px-3 py-1 rounded-full border border-slate-700/50">Bento Mode</span>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                <div class="bg-slate-950/40 border border-slate-800 p-4 rounded-xl">
+                    <span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">Dietary Profile</span>
+                    <p class="text-sm font-black text-orange-400 mt-1">Biryani &amp; Bajji</p>
+                </div>
+                <div class="bg-slate-950/40 border border-slate-800 p-4 rounded-xl">
+                    <span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">Beverage Engine</span>
+                    <p class="text-sm font-black text-amber-500 mt-1">Normal Coffee</p>
+                </div>
+                <div class="bg-slate-950/40 border border-slate-800 p-4 rounded-xl">
+                    <span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">Overthinking Memory</span>
+                    <p class="text-sm font-black text-red-400 mt-1">48,291 Threads</p>
+                </div>
+                <div class="bg-slate-950/40 border border-slate-800 p-4 rounded-xl">
+                    <span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">Social Battery</span>
+                    <p class="text-sm font-black text-cyan-400 mt-1">100% Introvert</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 flex-1">
+                <div class="bg-slate-950/20 border border-slate-800 p-4 rounded-xl flex flex-col justify-between min-h-[120px]">
+                    <div>
+                        <span class="text-[9px] font-bold text-slate-500 uppercase tracking-wider block">Audit Node</span>
+                        <h4 class="text-sm font-bold text-white mt-0.5">AP Junk Food Radar</h4>
+                        <p id="analysis" class="text-slate-400 text-xs mt-1 font-medium">Awaiting manual query track synchronization...</p>
+                    </div>
+                    <button onclick="analyze()" class="bg-slate-800 hover:bg-slate-700 text-white font-bold text-[10px] py-1.5 rounded-lg border border-slate-700 cursor-pointer text-center transition">Scan Logs</button>
+                </div>
+
+                <div class="bg-slate-950/20 border border-slate-800 p-4 rounded-xl flex flex-col justify-between min-h-[120px]">
+                    <div>
+                        <span class="text-[9px] font-bold text-slate-500 uppercase tracking-wider block">Logic Node</span>
+                        <h4 class="text-sm font-bold text-white mt-0.5">Brain Slot Machine</h4>
+                        <div id="slot" class="text-xl font-extrabold text-center py-1 tracking-wider text-amber-500">🎲 🎲 🎲</div>
+                    </div>
+                    <button onclick="spin()" class="bg-slate-800 hover:bg-slate-700 text-white font-bold text-[10px] py-1.5 rounded-lg border border-slate-700 cursor-pointer text-center transition">Spin Cells</button>
+                </div>
+
+                <div class="bg-slate-950/20 border border-slate-800 p-4 rounded-xl flex flex-col justify-between min-h-[120px]">
+                    <div>
+                        <span class="text-[9px] font-bold text-slate-500 uppercase tracking-wider block">Thought Node</span>
+                        <h4 class="text-sm font-bold text-white mt-0.5">Anxiety Tracker</h4>
+                        <p id="excuseBox" class="text-slate-400 text-xs mt-1 font-medium truncate">Processing scenario files from 2019...</p>
+                    </div>
+                    <button onclick="excuse()" class="bg-slate-800 hover:bg-slate-700 text-white font-bold text-[10px] py-1.5 rounded-lg border border-slate-700 cursor-pointer text-center transition">Analyze Thoughts</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="page5" class="vibe-page hidden flex flex-col justify-between flex-1">
+            <div class="flex justify-between items-center border-b border-slate-800 pb-4 mb-4">
+                <span class="text-xs font-bold text-slate-500 uppercase tracking-widest">Page 05 // System Logs</span>
+                <span class="text-xs bg-slate-800 text-slate-500 font-bold px-3 py-1 rounded-full border border-slate-700/50">Terminal</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 flex-1">
+                <div class="bg-slate-950/40 border border-slate-800 p-4 rounded-xl">
+                    <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block mb-2">Verified Matrix Badges</span>
+                    <div class="space-y-1.5 text-[11px] font-medium text-slate-300">
+                        <div class="bg-slate-900/60 p-2 rounded-lg border border-slate-800/60">🏅 Tomato Bajji Connoisseur</div>
+                        <div class="bg-slate-900/60 p-2 rounded-lg border border-slate-800/60">🏅 Anti-Bubble Tea Coalition Member</div>
+                        <div class="bg-slate-900/60 p-2 rounded-lg border border-slate-800/60">🏅 S-Tier Biryani Quality Analyst</div>
+                        <div class="bg-slate-900/60 p-2 rounded-lg border border-slate-800/60">🏅 Scenario Architect (Overthinking asset)</div>
+                    </div>
+                </div>
+
+                <div id="complimentZone" class="bg-slate-950/40 border border-slate-800 p-4 rounded-xl flex flex-col justify-between relative overflow-hidden min-h-[160px]">
+                    <div>
+                        <span class="text-[10px] font-bold text-orange-400 uppercase tracking-wider block">Escape Compliment Core</span>
+                        <p class="text-slate-400 text-xs mt-0.5">Introvert protection mode calibrated. Zero tracking eyes allowed.</p>
+                    </div>
+                    <div class="relative h-12 w-full">
+                        <button id="runBtn" class="absolute bg-gradient-to-r from-orange-500 to-rose-600 font-extrabold text-white text-xs px-4 py-2 rounded-lg shadow-lg cursor-pointer transition-all duration-100 ease-out whitespace-nowrap z-20" style="left:0; bottom:0;">
+                            Click to Compliment safely 🏆
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800/60 pt-4 mt-4 flex justify-between items-center text-[10px] font-bold text-slate-600">
+                <span>System Matrix Config Status: Active</span>
+                <button onclick="destroy()" class="text-red-500/60 hover:text-red-400 tracking-wider uppercase cursor-pointer">💣 Initialize Isolation Sequence</button>
+            </div>
+        </div>
+
+        <div class="flex justify-between items-center border-t border-slate-800/60 pt-4 mt-6">
+            <button onclick="navigatePage(-1)" class="bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700/60 font-bold text-xs px-4 py-2 rounded-xl transition active:scale-90 cursor-pointer disabled:opacity-20 disabled:pointer-events-none" id="prevPageBtn">
+                ◀ Previous Page
             </button>
-        </footer>
+            
+            <div class="flex gap-2" id="deckIndicators"></div>
+            
+            <button onclick="navigatePage(1)" class="bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700/60 font-bold text-xs px-4 py-2 rounded-xl transition active:scale-90 cursor-pointer disabled:opacity-20 disabled:pointer-events-none" id="nextPageBtn">
+                Next Page ▶
+            </button>
+        </div>
 
     </div>
 
-    <!-- 🐱 MULTI-PLAYER CAT OVERLAY MODAL (URL FIXED EDITION) 🐱 -->
     <div id="catModal" class="fixed inset-0 bg-black/95 hidden items-center justify-center z-[100] p-4 transition-all duration-300">
         <div class="bg-slate-900 border-2 border-orange-500 max-w-sm w-full rounded-3xl p-6 shadow-2xl flex flex-col items-center relative">
             <button onclick="closeCat()" class="absolute -top-3 -right-3 bg-red-600 hover:bg-red-700 text-white font-black w-8 h-8 rounded-full shadow-lg flex items-center justify-center cursor-pointer text-xs">✕</button>
@@ -230,6 +232,40 @@
         ];
 
         let current = 0;
+        let activePageIdx = 0;
+        const pages = document.querySelectorAll('.vibe-page');
+        const deckIndicatorsContainer = document.getElementById('deckIndicators');
+
+        // Dynamically build slide indicator node bullets matching pages lengths count
+        pages.forEach((_, idx) => {
+            const bullet = document.createElement('div');
+            bullet.className = `w-2 h-2 rounded-full transition-all duration-300 ${idx === 0 ? 'bg-orange-400 w-5' : 'bg-slate-700'}`;
+            deckIndicatorsContainer.appendChild(bullet);
+        });
+        const bullets = deckIndicatorsContainer.querySelectorAll('div');
+
+        function renderPage() {
+            pages.forEach((page, idx) => {
+                if (idx === activePageIdx) {
+                    page.classList.remove('hidden');
+                    bullets[idx].className = "w-5 h-2 rounded-full bg-orange-400 transition-all duration-300";
+                } else {
+                    page.classList.add('hidden');
+                    bullets[idx].className = "w-2 h-2 rounded-full bg-slate-700 transition-all duration-300";
+                }
+            });
+
+            document.getElementById('prevPageBtn').disabled = (activePageIdx === 0);
+            document.getElementById('nextPageBtn').disabled = (activePageIdx === pages.length - 1);
+        }
+
+        function navigatePage(dir) {
+            playAudioTone(400, 0.04);
+            activePageIdx = Math.max(0, Math.min(pages.length - 1, activePageIdx + dir));
+            renderPage();
+        }
+
+        renderPage();
 
         function playAudioTone(freq, duration) {
             try {
@@ -240,7 +276,7 @@
                 gainNode.connect(audioCtx.destination);
                 oscillator.frequency.value = freq;
                 oscillator.type = 'sawtooth';
-                gainNode.gain.setValueAtTime(0.02, audioCtx.currentTime);
+                gainNode.gain.setValueAtTime(0.01, audioCtx.currentTime);
                 oscillator.start();
                 oscillator.stop(audioCtx.currentTime + duration);
             } catch(e) {}
@@ -249,7 +285,7 @@
         function flashBanner(text, colorClass) {
             const banner = document.getElementById("statusBanner");
             banner.innerText = text;
-            banner.className = `bg-slate-900 border border-slate-800 text-center text-sm font-bold p-4 rounded-xl mb-6 animate-pulse ${colorClass}`;
+            banner.className = `w-full max-w-4xl bg-slate-900/80 border border-slate-800 text-center text-sm font-bold p-4 rounded-xl mb-4 animate-pulse ${colorClass}`;
         }
 
         function showSlide() {
@@ -282,7 +318,6 @@
             flashBanner("☕ Fresh traditional coffee brewed. Brain cells momentarily rebooted!", "text-amber-400");
         }
 
-        /* Fixed Video Dynamic Link Decoders */
         function answerQuestion(isYes) {
             const modal = document.getElementById("catModal");
             const video = document.getElementById("yapapaVideo");
@@ -292,7 +327,6 @@
             modal.classList.add("flex");
             video.muted = false;
 
-            // Direct relative structural references bypass character matching dependencies
             if (isYes) {
                 title.innerText = "❤️ Vibe Approved: Yapapa Cat Summoned!";
                 title.className = "text-md font-black text-emerald-400 tracking-tight text-center mb-4";
@@ -305,11 +339,7 @@
 
             video.currentTime = 0;
             video.load();
-            video.play().catch(e => console.log("Autoplay check intercepted. Click framework context fallback enabled."));
-        }
-
-        function summonCat() {
-            answerQuestion(true);
+            video.play().catch(e => console.log("Autoplay blocker fallback trace."));
         }
 
         function closeCat() {
@@ -354,6 +384,7 @@
             document.getElementById("excuseBox").innerText = excuses[Math.floor(Math.random() * excuses.length)];
         }
 
+        // Runaway escape button pointer movement metrics engine
         const btn = document.getElementById("runBtn");
         const zone = document.getElementById("complimentZone");
 
@@ -369,13 +400,13 @@
             
             const distance = Math.hypot(mouseX - btnCenterX, mouseY - btnCenterY);
             
-            if (distance < 75) {
+            if (distance < 65) {
                 playAudioTone(450, 0.03);
                 const maxW = zone.clientWidth - btnRect.width - 24;
-                const maxH = zone.clientHeight - btnRect.height - 56;
+                const maxH = zone.clientHeight - btnRect.height - 48;
                 
                 const randX = Math.max(12, Math.floor(Math.random() * maxW));
-                const randY = Math.max(12, Math.floor(Math.random() * maxH)) + 36;
+                const randY = Math.max(12, Math.floor(Math.random() * maxH)) + 28;
 
                 btn.style.left = randX + "px";
                 btn.style.top = randY + "px";
