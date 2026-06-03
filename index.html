@@ -10,54 +10,51 @@
             background-color: #0b0f19;
             background-image: radial-gradient(circle at 50% 50%, #1e1b4b 0%, #090d16 100%);
         }
-        /* Custom scrollbar styling for the horizontal photo strip */
+        /* Custom smooth horizontal scrollbar rules */
         .photo-strip::-webkit-scrollbar {
             height: 6px;
         }
         .photo-strip::-webkit-scrollbar-track {
-            background: rgba(15, 23, 42, 0.3);
+            background: rgba(15, 23, 42, 0.4);
             border-radius: 99px;
         }
         .photo-strip::-webkit-scrollbar-thumb {
-            background: rgba(249, 115, 22, 0.3);
+            background: rgba(249, 115, 22, 0.4);
             border-radius: 99px;
         }
         .photo-strip::-webkit-scrollbar-thumb:hover {
-            background: rgba(249, 115, 22, 0.5);
+            background: rgba(249, 115, 22, 0.6);
         }
     </style>
 </head>
 <body class="text-slate-100 min-h-screen px-4 py-6 md:py-12 flex flex-col items-center justify-center font-sans selection:bg-pink-500 selection:text-white">
 
-    <!-- MAIN CONTAINER -->
     <div class="w-full max-w-2xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-xl rounded-3xl shadow-2xl p-6 md:p-10 min-h-[560px] flex flex-col justify-between relative overflow-hidden">
         
-        <!-- PAGE 1: Welcome Cover Page with Horizontal Photo Strip -->
         <div id="page1" class="vibe-page flex flex-col justify-between flex-1">
             <div class="text-center text-[11px] font-bold text-slate-500 uppercase tracking-widest border-b border-slate-800/60 pb-3">
-                Slide 01 // Dedicated App Node
+                Slide 01 // Dedicated App Matrix
             </div>
             
             <div class="my-auto text-center py-4">
                 <h1 class="text-4xl md:text-5xl font-black tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-orange-400 via-rose-400 to-amber-500 leading-tight">
                     The Lohitha Vibe Space
                 </h1>
-                <p class="text-slate-300 font-medium text-xs md:text-sm mt-2 max-w-md mx-auto leading-relaxed">
-                    A premium presentation workspace designed exclusively for someone incredibly special. Pass through the custom calibration checks below to open the validation summary. ✨
+                <p class="text-slate-300 font-medium text-xs md:text-sm mt-3 max-w-md mx-auto leading-relaxed">
+                    A premium workspace designed exclusively for someone incredibly special. Pass through the customized calibration checks below to open the security gateway. ✨
                 </p>
 
-                <!-- HORIZONTAL PHOTO GALLERY STRIP -->
-                <div class="mt-8 mb-4">
-                    <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider text-left mb-2 px-1">📷 Gallery Stream (Scroll Horizontally) ➔</p>
-                    <div class="photo-strip flex gap-4 overflow-x-auto pb-3 pt-1 scroll-smooth snap-x">
-                        <div class="w-36 h-48 rounded-xl overflow-hidden border border-slate-800 bg-slate-950 flex-shrink-0 snap-center shadow-lg"><img src="6ac983fb-89c7-485e-8da8-7c1a26d6a01a.jpg" class="w-full h-full object-cover"></div>
-                        <div class="w-36 h-48 rounded-xl overflow-hidden border border-slate-800 bg-slate-950 flex-shrink-0 snap-center shadow-lg"><img src="2b4cb790-92a8-4fc4-9def-09c05ab4b9b8.jpg" class="w-full h-full object-cover"></div>
-                        <div class="w-36 h-48 rounded-xl overflow-hidden border border-slate-800 bg-slate-950 flex-shrink-0 snap-center shadow-lg"><img src="67cd165b-8bd8-43e4-a4cc-b9a3c3958a0b.jpg" class="w-full h-full object-cover"></div>
-                        <div class="w-36 h-48 rounded-xl overflow-hidden border border-slate-800 bg-slate-950 flex-shrink-0 snap-center shadow-lg"><img src="0eee80a5-0865-48f2-8ec7-faa523db5622.jpg" class="w-full h-full object-cover"></div>
-                        <div class="w-36 h-48 rounded-xl overflow-hidden border border-slate-800 bg-slate-950 flex-shrink-0 snap-center shadow-lg"><img src="d42034cd-e556-4367-bc8e-852894ee885f.jpg" class="w-full h-full object-cover"></div>
-                        <div class="w-36 h-48 rounded-xl overflow-hidden border border-slate-800 bg-slate-950 flex-shrink-0 snap-center shadow-lg"><img src="7e74a0c9-9435-4583-901b-fdd1eb12f117.jpg" class="w-full h-full object-cover"></div>
-                        <div class="w-36 h-48 rounded-xl overflow-hidden border border-slate-800 bg-slate-950 flex-shrink-0 snap-center shadow-lg"><img src="576235ba-0b25-4a20-95e9-bf2db1c3ff96.jpg" class="w-full h-full object-cover"></div>
-                        <div class="w-36 h-48 rounded-xl overflow-hidden border border-slate-800 bg-slate-950 flex-shrink-0 snap-center shadow-lg"><img src="e4c0cb90-958f-4377-81f3-9c0687eeaa6e.jpg" class="w-full h-full object-cover"></div>
+                <div class="mt-6 mb-2">
+                    <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider text-left mb-2 px-1">📸 Gallery Stream (Scroll Horizontally) ➔</p>
+                    <div class="photo-strip flex gap-4 overflow-x-auto pb-4 pt-1 scroll-smooth snap-x">
+                        <div class="w-36 h-48 rounded-xl overflow-hidden border border-slate-800/80 bg-slate-950 flex-shrink-0 snap-center shadow-2xl"><img src="6ac983fb-89c7-485e-8da8-7c1a26d6a01a.jpg" class="w-full h-full object-cover"></div>
+                        <div class="w-36 h-48 rounded-xl overflow-hidden border border-slate-800/80 bg-slate-950 flex-shrink-0 snap-center shadow-2xl"><img src="2b4cb790-92a8-4fc4-9def-09c05ab4b9b8.jpg" class="w-full h-full object-cover"></div>
+                        <div class="w-36 h-48 rounded-xl overflow-hidden border border-slate-800/80 bg-slate-950 flex-shrink-0 snap-center shadow-2xl"><img src="67cd165b-8bd8-43e4-a4cc-b9a3c3958a0b.jpg" class="w-full h-full object-cover"></div>
+                        <div class="w-36 h-48 rounded-xl overflow-hidden border border-slate-800/80 bg-slate-950 flex-shrink-0 snap-center shadow-2xl"><img src="0eee80a5-0865-48f2-8ec7-faa523db5622.jpg" class="w-full h-full object-cover"></div>
+                        <div class="w-36 h-48 rounded-xl overflow-hidden border border-slate-800/80 bg-slate-950 flex-shrink-0 snap-center shadow-2xl"><img src="d42034cd-e556-4367-bc8e-852894ee885f.jpg" class="w-full h-full object-cover"></div>
+                        <div class="w-36 h-48 rounded-xl overflow-hidden border border-slate-800/80 bg-slate-950 flex-shrink-0 snap-center shadow-2xl"><img src="7e74a0c9-9435-4583-901b-fdd1eb12f117.jpg" class="w-full h-full object-cover"></div>
+                        <div class="w-36 h-48 rounded-xl overflow-hidden border border-slate-800/80 bg-slate-950 flex-shrink-0 snap-center shadow-2xl"><img src="576235ba-0b25-4a20-95e9-bf2db1c3ff96.jpg" class="w-full h-full object-cover"></div>
+                        <div class="w-36 h-48 rounded-xl overflow-hidden border border-slate-800/80 bg-slate-950 flex-shrink-0 snap-center shadow-2xl"><img src="e4c0cb90-958f-4377-81f3-9c0687eeaa6e.jpg" class="w-full h-full object-cover"></div>
                     </div>
                 </div>
             </div>
@@ -67,7 +64,6 @@
             </div>
         </div>
 
-        <!-- PAGE 2: Question 1 - Local AP Junk Food Choice -->
         <div id="page2" class="vibe-page hidden flex flex-col justify-between flex-1">
             <div class="text-center text-[11px] font-bold text-slate-500 uppercase tracking-widest border-b border-slate-800/60 pb-3">
                 Slide 02 // Calibration Check
@@ -96,7 +92,6 @@
             </div>
         </div>
 
-        <!-- PAGE 3: Question 2 - Beverage Preference -->
         <div id="page3" class="vibe-page hidden flex flex-col justify-between flex-1">
             <div class="text-center text-[11px] font-bold text-slate-500 uppercase tracking-widest border-b border-slate-800/60 pb-3">
                 Slide 03 // Routine Query
@@ -121,7 +116,6 @@
             </div>
         </div>
 
-        <!-- PAGE 4: Question 3 - Contact Sync Trap -->
         <div id="page4" class="vibe-page hidden flex flex-col justify-between flex-1">
             <div class="text-center text-[11px] font-bold text-slate-500 uppercase tracking-widest border-b border-slate-800/60 pb-3">
                 Slide 04 // Contact Sync Trap
@@ -146,7 +140,6 @@
             </div>
         </div>
 
-        <!-- PAGE 5: Question 4 - Who is the cooler bestie? -->
         <div id="page5" class="vibe-page hidden flex flex-col justify-between flex-1">
             <div class="text-center text-[11px] font-bold text-slate-500 uppercase tracking-widest border-b border-slate-800/60 pb-3">
                 Slide 05 // Closeness Audit
@@ -171,7 +164,6 @@
             </div>
         </div>
 
-        <!-- PAGE 6: Question 5 - Text Reply Target -->
         <div id="page6" class="vibe-page hidden flex flex-col justify-between flex-1">
             <div class="text-center text-[11px] font-bold text-slate-500 uppercase tracking-widest border-b border-slate-800/60 pb-3">
                 Slide 06 // Response Latency
@@ -199,7 +191,6 @@
             </div>
         </div>
 
-        <!-- PAGE 7: Question 6 - Final Relationship Gateway Checkpoint -->
         <div id="page7" class="vibe-page hidden flex flex-col justify-between flex-1">
             <div class="text-center text-[11px] font-bold text-purple-400 uppercase tracking-widest border-b border-purple-900/30 pb-3">
                 Slide 07 // Final Gateway Check
@@ -219,7 +210,6 @@
             </div>
         </div>
 
-        <!-- PAGE 8: Celebration Outro -->
         <div id="page8" class="vibe-page hidden flex flex-col justify-between flex-1">
             <div class="text-center text-[11px] font-bold text-slate-500 uppercase tracking-widest border-b border-slate-800/60 pb-3">
                 Slide 08 // Closing Deck
@@ -232,7 +222,6 @@
                     All core parameters logged successfully. Thank you for passing through the alignment checks—you are genuinely incredibly special! 🍕
                 </p>
 
-                <!-- Secure Runaway Protection Button Box -->
                 <div id="complimentZone" class="mt-8 border border-slate-800/80 bg-slate-950/30 rounded-2xl p-4 h-24 relative overflow-hidden flex flex-col justify-between items-start">
                     <span class="text-[9px] font-bold text-slate-500 uppercase tracking-wider block">Anxiety Protection Shield Layer</span>
                     <button id="runBtn" class="absolute bg-gradient-to-r from-orange-500 to-rose-600 font-extrabold text-white text-[10px] px-3.5 py-2 rounded-lg shadow-md cursor-pointer transition-all duration-100 ease-out whitespace-nowrap z-20" style="left: 16px; bottom: 16px;">
@@ -248,7 +237,6 @@
             </div>
         </div>
 
-        <!-- BOTTOM PRESENTATION NAV SLIDER -->
         <div class="flex justify-between items-center border-t border-slate-800/60 pt-4 mt-6">
             <button onclick="navigatePage(-1)" class="bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700/60 font-bold text-xs px-4 py-2 rounded-xl transition active:scale-90 cursor-pointer disabled:opacity-20 disabled:pointer-events-none" id="prevPageBtn">
                 ◀ Prev Page
@@ -263,7 +251,6 @@
 
     </div>
 
-    <!-- 🐱 FIXED MULTI-ROUTER CAT VIDEO MODAL OVERLAY 🐱 -->
     <div id="catModal" class="fixed inset-0 bg-black/95 hidden items-center justify-center z-[100] p-4 transition-all duration-300">
         <div class="bg-slate-900 border-2 border-slate-800 max-w-sm w-full rounded-3xl p-6 shadow-2xl flex flex-col items-center relative">
             <button onclick="closeCat()" class="absolute -top-3 -right-3 bg-red-600 hover:bg-red-700 text-white font-black w-8 h-8 rounded-full shadow-lg flex items-center justify-center cursor-pointer text-xs">✕</button>
@@ -280,6 +267,7 @@
         const pages = document.querySelectorAll('.vibe-page');
         const deckIndicatorsContainer = document.getElementById('deckIndicators');
 
+        // Dynamically configure presentation dot lines matching active layout bounds
         pages.forEach((_, idx) => {
             const bullet = document.createElement('div');
             bullet.className = `w-2 h-2 rounded-full transition-all duration-300 ${idx === 0 ? 'bg-orange-400 w-5' : 'bg-slate-700'}`;
@@ -323,6 +311,7 @@
             } catch(e) {}
         }
 
+        // Drop interactive answers configurations
         function selectFood(type) {
             const resp = document.getElementById('foodResponse');
             if(type === 'biryani') {
@@ -350,10 +339,14 @@
 
         function selectReply(reason) {
             const resp = document.getElementById('replyResponse');
-            resp.innerText = "⏳ Log verified: This matches your active telemetry footprint.";
+            resp.innerText = "⏳ Log verified: This matches your active footprint.";
         }
 
-        /* BULLETPROOF DYNAMIC VIDEO LINK ENGINE */
+        function selectBestie(choice) {
+            document.getElementById('bestieResponse').innerText = "🏆 Choice locked! Database configuration finalized.";
+        }
+
+        /* HARD-CODED DYNAMIC URI ENCODING VIDEO INJECTOR ENGINE */
         function answerQuestion(isYes) {
             const modal = document.getElementById("catModal");
             const video = document.getElementById("yapapaVideo");
@@ -363,20 +356,24 @@
             modal.classList.add("flex");
             video.muted = false;
 
-            // This ensures characters like spaces and quote variations don't crash the server request link
+            // Grabbing the direct window origin space dynamically avoids filename layout matching crashes
+            const originBase = window.location.href.substring(0, window.location.href.lastIndexOf('/') + 1);
+
             if (isYes) {
                 title.innerText = "❤️ Vibe Approved: Yapapa Cat Summoned!";
                 title.className = "text-sm font-black text-emerald-400 tracking-tight text-center mb-4";
-                video.src = encodeURI("vidssave.com The Original 'Yapapa Ummm, Yapapa Haane’ New cat meme unlocked! 1080p.mp4");
+                video.src = originBase + "vidssave.com%20The%20Original%20'Yapapa%20Ummm,%20Yapapa%20Haane%E2%80%99%20New%20cat%20meme%20unlocked!%201080p.mp4";
             } else {
                 title.innerText = "🚨 ACCESS DENIED: CHAOS ALARM!";
                 title.className = "text-sm font-black text-red-500 tracking-tight text-center mb-4";
-                video.src = encodeURI("vidssave.com german cat speech 240P.mp4");
+                video.src = originBase + "vidssave.com%20german%20cat%20speech%20240P.mp4";
             }
 
             video.currentTime = 0;
             video.load();
-            video.play().catch(e => console.log("Autoplay caught. Waiting for click interaction fallback configuration."));
+            video.play().catch(e => {
+                console.log("Autoplay protection tripped. Manual override bounds active.");
+            });
         }
 
         function closeCat() {
@@ -388,7 +385,7 @@
             modal.classList.remove("flex");
         }
 
-        // Runaway Button pointer matrix controls inside slide 8 context parameters
+        // Runaway Button pointer matrix controls inside slide context parameters
         const btn = document.getElementById("runBtn");
         const zone = document.getElementById("complimentZone");
 
@@ -451,7 +448,7 @@
             document.body.innerHTML = `
                 <div class="flex flex-col items-center justify-center min-h-screen text-center p-6 bg-black text-orange-500 font-sans">
                     <h1 class="text-4xl font-black tracking-tighter uppercase mb-4 animate-bounce">🚪 PRESENTATION SUSPENDED </h1>
-                    <h2 class="text-md font-bold text-white max-w-xl px-4 leading-relaxed">Lohitha successfully left the presentation loop, closed the layout deck, and went to get filter coffee alone. No further social interactions authorized.</h2>
+                    <h2 class="text-md font-bold text-white max-w-xl px-4 leading-relaxed">Lohitha successfully left the presentation loop, closed the layout deck, and went to eat Biryani alone. No further social interactions authorized.</h2>
                 </div>
             `;
         }
