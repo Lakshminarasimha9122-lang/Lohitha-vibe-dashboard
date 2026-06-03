@@ -3,191 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lohitha Premium Workspace Portfolio</title>
+    <title>HBD Lohitha! ✨</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
         body {
-            background-color: #030712;
-            transition: background-color 0.4s ease;
-        }
-        @keyframes flash {
-            0%, 100% { background-color: #ef4444; }
-            25% { background-color: #f59e0b; }
-            50% { background-color: #3b82f6; }
-            75% { background-color: #10b981; }
-        }
-        .chaos-active {
-            animation: flash 0.3s infinite linear !important;
-        }
-        .spin-active {
-            animation: spin 2s linear infinite;
+            background-color: #0b0f19;
+            background-image: radial-gradient(circle at 50% 50%, #1e1b4b 0%, #090d16 100%);
         }
     </style>
 </head>
-<body class="text-slate-100 min-h-screen px-4 py-8 flex flex-col items-center justify-between selection:bg-orange-500 selection:text-white font-sans">
+<body class="text-slate-100 min-h-screen px-4 py-6 md:py-12 flex flex-col items-center justify-center font-sans selection:bg-pink-500 selection:text-white">
 
-    <div id="statusBanner" class="hidden w-full max-w-4xl bg-slate-900/80 border border-orange-500/30 text-center text-sm font-bold p-4 rounded-xl text-orange-400 animate-pulse mb-4"></div>
-
-    <div class="w-full max-w-4xl bg-slate-900/20 border border-slate-800/60 backdrop-blur-md rounded-3xl shadow-2xl p-6 md:p-8 flex-1 flex flex-col justify-between min-h-[580px] relative">
+    <!-- MAIN CANVA-INSPIRED STACK CONTAINER -->
+    <div class="w-full max-w-2xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-xl rounded-3xl shadow-2xl p-6 md:p-10 min-h-[520px] flex flex-col justify-between relative overflow-hidden">
         
+        <!-- PAGE 1: Welcome Cover Page -->
         <div id="page1" class="vibe-page flex flex-col justify-between flex-1">
-            <div class="flex justify-between items-center border-b border-slate-800 pb-4">
-                <span class="text-xs font-bold text-slate-500 uppercase tracking-widest">Page 01 // Cover Node</span>
-                <span class="text-xs bg-slate-800 text-slate-400 font-bold px-3 py-1 rounded-full border border-slate-700/50">v1.4.2</span>
+            <div class="text-center text-[11px] font-bold text-slate-500 uppercase tracking-widest border-b border-slate-800/60 pb-3">
+                Slide 01 // Introduction
             </div>
             
-            <div class="my-auto text-center py-8">
-                <h1 id="title" class="text-4xl md:text-6xl font-black tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-orange-400 via-rose-400 to-amber-500 leading-tight">
-                    Lohitha Supremacy Workspace
+            <div class="my-auto text-center py-6">
+                <span class="text-4xl md:text-5xl mb-4 block">👑</span>
+                <h1 class="text-4xl md:text-5xl font-black tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-orange-400 via-rose-400 to-amber-400 leading-tight">
+                    Happy Birthday, Lohitha!
                 </h1>
-                <p class="text-slate-400 font-medium text-sm md:text-base mt-2 max-w-lg mx-auto leading-relaxed">
-                    An authentic premium telemetry portfolio tracking local AP junk food logs, real-time overthinking frequencies, and introvert matrices.
+                <p class="text-slate-300 font-medium text-sm md:text-base mt-4 max-w-md mx-auto leading-relaxed">
+                    Welcome to your official premium birthday slide deck space. Click through the pages below to answer a few highly critical validation questions. ✨
                 </p>
-                <div class="mt-8 flex justify-center gap-3">
-                    <button onclick="chaosMode()" class="bg-red-950/40 hover:bg-red-900/60 text-red-400 border border-red-900/40 font-bold px-5 py-2.5 rounded-xl text-xs tracking-wider uppercase cursor-pointer transition">🚨 Chaos Mode</button>
-                    <button onclick="coolMode()" class="bg-amber-950/40 hover:bg-amber-900/60 text-amber-400 border border-amber-900/40 font-bold px-5 py-2.5 rounded-xl text-xs tracking-wider uppercase cursor-pointer transition">☕ Coffee Boost</button>
-                </div>
             </div>
 
-            <div class="text-center text-xs text-slate-500 font-semibold tracking-wider uppercase">Scroll Matrix or Use Page Nav Center</div>
+            <div class="text-center text-[10px] text-slate-500 font-bold tracking-wider uppercase">
+                Click Next Page to Begin the Deck
+            </div>
         </div>
 
+        <!-- PAGE 2: Question 1 - Local AP Junk Food Choice -->
         <div id="page2" class="vibe-page hidden flex flex-col justify-between flex-1">
-            <div class="flex justify-between items-center border-b border-slate-800 pb-4">
-                <span class="text-xs font-bold text-slate-500 uppercase tracking-widest">Page 02 // Asset Carousel</span>
-                <span class="text-xs bg-slate-800 text-emerald-400 border border-emerald-900/50 font-bold px-3 py-1 rounded-full">Live Sync</span>
+            <div class="text-center text-[11px] font-bold text-slate-500 uppercase tracking-widest border-b border-slate-800/60 pb-3">
+                Slide 02 // Calibration Check
             </div>
 
-            <div class="flex-1 flex flex-col items-center justify-center py-6">
-                <div class="w-64 h-64 md:w-72 md:h-72 rounded-2xl overflow-hidden border-2 border-orange-500/30 bg-slate-950 shadow-2xl relative">
-                    <img id="photo" src="6ac983fb-89c7-485e-8da8-7c1a26d6a01a.jpg" class="w-full h-full object-cover transition-all duration-300">
-                </div>
-                <p id="caption" class="text-base font-black mt-4 text-center tracking-tight text-orange-400 bg-slate-950/50 px-4 py-2 rounded-xl border border-slate-800/60">
-                    🎯 Current Vibe State: Elite Configuration
-                </p>
+            <div class="my-auto text-center py-6">
+                <span class="text-3xl mb-3 block">🍛</span>
+                <h2 class="text-2xl font-extrabold text-white tracking-tight">Question 1: Menu Verification</h2>
+                <p class="text-slate-400 text-xs mt-1 mb-6">Select your primary dietary energy resource classification:</p>
                 
-                <div class="flex gap-3 mt-4">
-                    <button onclick="prevSlide()" class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold px-4 py-1.5 rounded-xl text-xs cursor-pointer border border-slate-700/60 transition">◀ Prev</button>
-                    <button onclick="nextSlide()" class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold px-4 py-1.5 rounded-xl text-xs cursor-pointer border border-slate-700/60 transition">Next ▶</button>
+                <div class="flex flex-col gap-3 max-w-xs mx-auto">
+                    <button onclick="selectFood('biryani')" class="w-full bg-slate-800/80 hover:bg-orange-600/20 hover:border-orange-500/40 text-slate-200 font-bold py-3 px-4 rounded-xl text-xs tracking-wide border border-slate-700/60 cursor-pointer transition text-left flex justify-between items-center">
+                        <span>🔥 Spicy Local Biryani</span>
+                        <span>➔</span>
+                    </button>
+                    <button onclick="selectFood('bajji')" class="w-full bg-slate-800/80 hover:bg-orange-600/20 hover:border-orange-500/40 text-slate-200 font-bold py-3 px-4 rounded-xl text-xs tracking-wide border border-slate-700/60 cursor-pointer transition text-left flex justify-between items-center">
+                        <span>🌶️ Street Style Tomato Bajji</span>
+                        <span>➔</span>
+                    </button>
+                    <button onclick="selectFood('bubble')" class="w-full bg-slate-800/80 hover:bg-red-950/40 hover:border-red-900/50 text-slate-400 py-3 px-4 rounded-xl text-xs tracking-wide border border-slate-800/40 cursor-pointer transition text-left flex justify-between items-center">
+                        <span>🧋 Premium Styled Bubble Tea</span>
+                        <span class="text-[10px] text-red-400 uppercase font-black bg-red-950 px-2 py-0.5 rounded-md">Error // Rejected</span>
+                    </button>
                 </div>
+                <p id="foodResponse" class="text-xs font-bold text-orange-400 mt-4 h-4"></p>
             </div>
         </div>
 
+        <!-- PAGE 3: Question 2 - Beverage Preference -->
         <div id="page3" class="vibe-page hidden flex flex-col justify-between flex-1">
-            <div class="flex justify-between items-center border-b border-slate-800 pb-4">
-                <span class="text-xs font-bold text-purple-400 uppercase tracking-widest">Page 03 // Validation Gateway</span>
-                <span class="text-xs bg-purple-950/40 text-purple-300 border border-purple-900/50 px-3 py-1 rounded-full font-bold">Secure Core</span>
+            <div class="text-center text-[11px] font-bold text-slate-500 uppercase tracking-widest border-b border-slate-800/60 pb-3">
+                Slide 03 // Routine Query
             </div>
 
-            <div class="my-auto text-center py-8">
-                <h2 class="text-3xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400 mb-2">Core Question Checkpoint</h2>
-                <p class="text-slate-400 text-xs font-semibold max-w-sm mx-auto leading-relaxed">Provide immediate telemetry data confirmation regarding the target parameters.</p>
+            <div class="my-auto text-center py-6">
+                <span class="text-3xl mb-3 block">☕</span>
+                <h2 class="text-2xl font-extrabold text-white tracking-tight">Question 2: Beverage Engine</h2>
+                <p class="text-slate-400 text-xs mt-1 mb-6">How do you prefer to brew your focus timeline parameters?</p>
                 
-                <h3 class="text-2xl font-black text-white mt-8 mb-8 tracking-tight">"Do you like me?"</h3>
+                <div class="grid grid-cols-2 gap-4 max-w-sm mx-auto">
+                    <button onclick="selectCoffee('strong')" class="bg-slate-800/80 hover:bg-amber-600/20 hover:border-amber-500/40 border border-slate-700/60 p-4 rounded-xl cursor-pointer transition flex flex-col items-center gap-2">
+                        <span class="text-lg">💪</span>
+                        <span class="text-xs font-bold text-slate-200">Normal Strong Coffee</span>
+                    </button>
+                    <button onclick="selectCoffee('overthink')" class="bg-slate-800/80 hover:bg-amber-600/20 hover:border-amber-500/40 border border-slate-700/60 p-4 rounded-xl cursor-pointer transition flex flex-col items-center gap-2">
+                        <span class="text-lg">💭</span>
+                        <span class="text-xs font-bold text-slate-200">Overthinking Fuel</span>
+                    </button>
+                </div>
+                <p id="coffeeResponse" class="text-xs font-bold text-amber-400 mt-5 h-4"></p>
+            </div>
+        </div>
+
+        <!-- PAGE 4: Question 3 - The Ultimate Target Gateway Checkpoint -->
+        <div id="page4" class="vibe-page hidden flex flex-col justify-between flex-1">
+            <div class="text-center text-[11px] font-bold text-purple-400 uppercase tracking-widest border-b border-purple-900/30 pb-3">
+                Slide 04 // Validation Gateway
+            </div>
+
+            <div class="my-auto text-center py-6">
+                <span class="text-3xl mb-3 block">🫣</span>
+                <h2 class="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400 tracking-tight">Question 3: Core Validation Check</h2>
+                <p class="text-slate-400 text-xs mt-1 mb-8">Introvert secure configuration. Response profile will dictate video playback metrics.</p>
+                
+                <h3 class="text-xl font-extrabold text-white mb-6">"Do you like me?"</h3>
                 
                 <div class="flex justify-center gap-4 max-w-xs mx-auto">
-                    <button onclick="answerQuestion(true)" class="flex-1 bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-400 border border-emerald-500/30 font-bold py-3.5 rounded-xl transition active:scale-95 text-xs tracking-widest cursor-pointer uppercase">YES 👍</button>
-                    <button onclick="answerQuestion(false)" class="flex-1 bg-rose-600/20 hover:bg-rose-600/30 text-rose-400 border border-rose-500/30 font-bold py-3.5 rounded-xl transition active:scale-95 text-xs tracking-widest cursor-pointer uppercase">NO 👎</button>
+                    <button onclick="answerQuestion(true)" class="flex-1 bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-400 border border-emerald-500/30 font-black py-3.5 rounded-xl transition active:scale-95 text-xs tracking-widest cursor-pointer uppercase">YES 👍</button>
+                    <button onclick="answerQuestion(false)" class="flex-1 bg-rose-600/20 hover:bg-rose-600/30 text-rose-400 border border-rose-500/30 font-black py-3.5 rounded-xl transition active:scale-95 text-xs tracking-widest cursor-pointer uppercase">NO 👎</button>
                 </div>
             </div>
         </div>
 
-        <div id="page4" class="vibe-page hidden flex flex-col justify-between flex-1">
-            <div class="flex justify-between items-center border-b border-slate-800 pb-4 mb-4">
-                <span class="text-xs font-bold text-slate-500 uppercase tracking-widest">Page 04 // Analytics Deck</span>
-                <span class="text-xs bg-slate-800 text-slate-400 font-bold px-3 py-1 rounded-full border border-slate-700/50">Bento Mode</span>
-            </div>
-
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-                <div class="bg-slate-950/40 border border-slate-800 p-4 rounded-xl">
-                    <span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">Dietary Profile</span>
-                    <p class="text-sm font-black text-orange-400 mt-1">Biryani &amp; Bajji</p>
-                </div>
-                <div class="bg-slate-950/40 border border-slate-800 p-4 rounded-xl">
-                    <span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">Beverage Engine</span>
-                    <p class="text-sm font-black text-amber-500 mt-1">Normal Coffee</p>
-                </div>
-                <div class="bg-slate-950/40 border border-slate-800 p-4 rounded-xl">
-                    <span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">Overthinking Memory</span>
-                    <p class="text-sm font-black text-red-400 mt-1">48,291 Threads</p>
-                </div>
-                <div class="bg-slate-950/40 border border-slate-800 p-4 rounded-xl">
-                    <span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">Social Battery</span>
-                    <p class="text-sm font-black text-cyan-400 mt-1">100% Introvert</p>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 flex-1">
-                <div class="bg-slate-950/20 border border-slate-800 p-4 rounded-xl flex flex-col justify-between min-h-[120px]">
-                    <div>
-                        <span class="text-[9px] font-bold text-slate-500 uppercase tracking-wider block">Audit Node</span>
-                        <h4 class="text-sm font-bold text-white mt-0.5">AP Junk Food Radar</h4>
-                        <p id="analysis" class="text-slate-400 text-xs mt-1 font-medium">Awaiting manual query track synchronization...</p>
-                    </div>
-                    <button onclick="analyze()" class="bg-slate-800 hover:bg-slate-700 text-white font-bold text-[10px] py-1.5 rounded-lg border border-slate-700 cursor-pointer text-center transition">Scan Logs</button>
-                </div>
-
-                <div class="bg-slate-950/20 border border-slate-800 p-4 rounded-xl flex flex-col justify-between min-h-[120px]">
-                    <div>
-                        <span class="text-[9px] font-bold text-slate-500 uppercase tracking-wider block">Logic Node</span>
-                        <h4 class="text-sm font-bold text-white mt-0.5">Brain Slot Machine</h4>
-                        <div id="slot" class="text-xl font-extrabold text-center py-1 tracking-wider text-amber-500">🎲 🎲 🎲</div>
-                    </div>
-                    <button onclick="spin()" class="bg-slate-800 hover:bg-slate-700 text-white font-bold text-[10px] py-1.5 rounded-lg border border-slate-700 cursor-pointer text-center transition">Spin Cells</button>
-                </div>
-
-                <div class="bg-slate-950/20 border border-slate-800 p-4 rounded-xl flex flex-col justify-between min-h-[120px]">
-                    <div>
-                        <span class="text-[9px] font-bold text-slate-500 uppercase tracking-wider block">Thought Node</span>
-                        <h4 class="text-sm font-bold text-white mt-0.5">Anxiety Tracker</h4>
-                        <p id="excuseBox" class="text-slate-400 text-xs mt-1 font-medium truncate">Processing scenario files from 2019...</p>
-                    </div>
-                    <button onclick="excuse()" class="bg-slate-800 hover:bg-slate-700 text-white font-bold text-[10px] py-1.5 rounded-lg border border-slate-700 cursor-pointer text-center transition">Analyze Thoughts</button>
-                </div>
-            </div>
-        </div>
-
+        <!-- PAGE 5: Birthday Celebration Outro -->
         <div id="page5" class="vibe-page hidden flex flex-col justify-between flex-1">
-            <div class="flex justify-between items-center border-b border-slate-800 pb-4 mb-4">
-                <span class="text-xs font-bold text-slate-500 uppercase tracking-widest">Page 05 // System Logs</span>
-                <span class="text-xs bg-slate-800 text-slate-500 font-bold px-3 py-1 rounded-full border border-slate-700/50">Terminal</span>
+            <div class="text-center text-[11px] font-bold text-slate-500 uppercase tracking-widest border-b border-slate-800/60 pb-3">
+                Slide 05 // Closing Deck
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 flex-1">
-                <div class="bg-slate-950/40 border border-slate-800 p-4 rounded-xl">
-                    <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block mb-2">Verified Matrix Badges</span>
-                    <div class="space-y-1.5 text-[11px] font-medium text-slate-300">
-                        <div class="bg-slate-900/60 p-2 rounded-lg border border-slate-800/60">🏅 Tomato Bajji Connoisseur</div>
-                        <div class="bg-slate-900/60 p-2 rounded-lg border border-slate-800/60">🏅 Anti-Bubble Tea Coalition Member</div>
-                        <div class="bg-slate-900/60 p-2 rounded-lg border border-slate-800/60">🏅 S-Tier Biryani Quality Analyst</div>
-                        <div class="bg-slate-900/60 p-2 rounded-lg border border-slate-800/60">🏅 Scenario Architect (Overthinking asset)</div>
-                    </div>
-                </div>
+            <div class="my-auto text-center py-6 relative">
+                <span class="text-4xl mb-3 block">🎉</span>
+                <h2 class="text-3xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-amber-500">Lohitha Supremacy Confirmed</h2>
+                <p class="text-slate-300 text-xs font-semibold mt-2 max-w-sm mx-auto leading-relaxed">
+                    All question metrics logged successfully. Have an amazing year causing chaotic scenarios! 🍕
+                </p>
 
-                <div id="complimentZone" class="bg-slate-950/40 border border-slate-800 p-4 rounded-xl flex flex-col justify-between relative overflow-hidden min-h-[160px]">
-                    <div>
-                        <span class="text-[10px] font-bold text-orange-400 uppercase tracking-wider block">Escape Compliment Core</span>
-                        <p class="text-slate-400 text-xs mt-0.5">Introvert protection mode calibrated. Zero tracking eyes allowed.</p>
-                    </div>
-                    <div class="relative h-12 w-full">
-                        <button id="runBtn" class="absolute bg-gradient-to-r from-orange-500 to-rose-600 font-extrabold text-white text-xs px-4 py-2 rounded-lg shadow-lg cursor-pointer transition-all duration-100 ease-out whitespace-nowrap z-20" style="left:0; bottom:0;">
-                            Click to Compliment safely 🏆
-                        </button>
-                    </div>
+                <!-- Secure Runaway Protection Button Box -->
+                <div id="complimentZone" class="mt-8 border border-slate-800/80 bg-slate-950/30 rounded-2xl p-4 h-24 relative overflow-hidden flex flex-col justify-between items-start">
+                    <span class="text-[9px] font-bold text-slate-500 uppercase tracking-wider block">Anxiety Protection Layer</span>
+                    <button id="runBtn" class="absolute bg-gradient-to-r from-orange-500 to-rose-600 font-extrabold text-white text-[10px] px-3.5 py-2 rounded-lg shadow-md cursor-pointer transition-all duration-100 ease-out whitespace-nowrap z-20" style="left: 16px; bottom: 16px;">
+                        Click to Collect Compliment 🏆
+                    </button>
                 </div>
             </div>
 
-            <div class="border-t border-slate-800/60 pt-4 mt-4 flex justify-between items-center text-[10px] font-bold text-slate-600">
-                <span>System Matrix Config Status: Active</span>
-                <button onclick="destroy()" class="text-red-500/60 hover:text-red-400 tracking-wider uppercase cursor-pointer">💣 Initialize Isolation Sequence</button>
+            <div class="flex justify-end pt-2">
+                <button onclick="destroy()" class="text-[10px] font-bold text-red-500/60 hover:text-red-400 uppercase tracking-wider cursor-pointer">
+                    💣 Close Terminal
+                </button>
             </div>
         </div>
 
+        <!-- BOTTOM PRESENTATION NAV SLIDER -->
         <div class="flex justify-between items-center border-t border-slate-800/60 pt-4 mt-6">
             <button onclick="navigatePage(-1)" class="bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700/60 font-bold text-xs px-4 py-2 rounded-xl transition active:scale-90 cursor-pointer disabled:opacity-20 disabled:pointer-events-none" id="prevPageBtn">
-                ◀ Previous Page
+                ◀ Prev Page
             </button>
             
+            <!-- Canva Slide Dots Indicators -->
             <div class="flex gap-2" id="deckIndicators"></div>
             
             <button onclick="navigatePage(1)" class="bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700/60 font-bold text-xs px-4 py-2 rounded-xl transition active:scale-90 cursor-pointer disabled:opacity-20 disabled:pointer-events-none" id="nextPageBtn">
@@ -197,46 +157,24 @@
 
     </div>
 
+    <!-- 🐱 MULTI-ROUTER CAT VIDEO MODAL OVERLAY 🐱 -->
     <div id="catModal" class="fixed inset-0 bg-black/95 hidden items-center justify-center z-[100] p-4 transition-all duration-300">
-        <div class="bg-slate-900 border-2 border-orange-500 max-w-sm w-full rounded-3xl p-6 shadow-2xl flex flex-col items-center relative">
+        <div class="bg-slate-900 border-2 border-slate-800 max-w-sm w-full rounded-3xl p-6 shadow-2xl flex flex-col items-center relative">
             <button onclick="closeCat()" class="absolute -top-3 -right-3 bg-red-600 hover:bg-red-700 text-white font-black w-8 h-8 rounded-full shadow-lg flex items-center justify-center cursor-pointer text-xs">✕</button>
-            <h3 id="modalTitleText" class="text-lg font-black tracking-tight text-center mb-4">🛡️ Security Gateway</h3>
+            <h3 id="modalTitleText" class="text-sm font-black tracking-tight text-center mb-4 text-slate-300">🛡️ Security System Gate</h3>
             <div class="w-64 aspect-[9/16] bg-slate-950 rounded-2xl border border-slate-800 overflow-hidden shadow-2xl relative">
                 <video id="yapapaVideo" class="w-full h-full object-cover" loop controls playsinline preload="auto"></video>
             </div>
-            <p class="text-[10px] text-slate-500 text-center mt-3 font-medium">Verify system device balance profiles to load raw audio strings.</p>
+            <p class="text-[10px] text-slate-500 text-center mt-3 font-medium">Verify system sound bars to pull audio strings live.</p>
         </div>
     </div>
 
     <script>
-        const images = [
-            "6ac983fb-89c7-485e-8da8-7c1a26d6a01a.jpg",
-            "2b4cb790-92a8-4fc4-9def-09c05ab4b9b8.jpg",
-            "67cd165b-8bd8-43e4-a4cc-b9a3c3958a0b.jpg",
-            "0eee80a5-0865-48f2-8ec7-faa523db5622.jpg",
-            "d42034cd-e556-4367-bc8e-852894ee885f.jpg",
-            "7e74a0c9-9435-4583-901b-fdd1eb12f117.jpg",
-            "576235ba-0b25-4a20-95e9-bf2db1c3ff96.jpg",
-            "e4c0cb90-958f-4377-81f3-9c0687eeaa6e.jpg"
-        ];
-
-        const captions = [
-            "🎯 Current Vibe State: Elite Configuration",
-            "🔥 Current Vibe State: Tomato Bajji Level Critical",
-            "⚡ Current Vibe State: Formulating 14 Fake Scenarios",
-            "☕ Current Vibe State: Normal Coffee Infusion Complete",
-            "🔮 Current Vibe State: Tracking Who Is Looking At Her",
-            "🎭 Current Vibe State: High Spicy Biryani Consumption",
-            "👑 Current Vibe State: Social Battery At 4%",
-            "🌟 Current Vibe State: Ultimate AP Local Mode Activated"
-        ];
-
-        let current = 0;
         let activePageIdx = 0;
         const pages = document.querySelectorAll('.vibe-page');
         const deckIndicatorsContainer = document.getElementById('deckIndicators');
 
-        // Dynamically build slide indicator node bullets matching pages lengths count
+        // Dynamically configure presentation dot lines matching active layout bounds
         pages.forEach((_, idx) => {
             const bullet = document.createElement('div');
             bullet.className = `w-2 h-2 rounded-full transition-all duration-300 ${idx === 0 ? 'bg-orange-400 w-5' : 'bg-slate-700'}`;
@@ -260,62 +198,32 @@
         }
 
         function navigatePage(dir) {
-            playAudioTone(400, 0.04);
             activePageIdx = Math.max(0, Math.min(pages.length - 1, activePageIdx + dir));
             renderPage();
         }
 
-        renderPage();
-
-        function playAudioTone(freq, duration) {
-            try {
-                const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-                const oscillator = audioCtx.createOscillator();
-                const gainNode = audioCtx.createGain();
-                oscillator.connect(gainNode);
-                gainNode.connect(audioCtx.destination);
-                oscillator.frequency.value = freq;
-                oscillator.type = 'sawtooth';
-                gainNode.gain.setValueAtTime(0.01, audioCtx.currentTime);
-                oscillator.start();
-                oscillator.stop(audioCtx.currentTime + duration);
-            } catch(e) {}
+        // Drop interactive answers configurations
+        function selectFood(type) {
+            const resp = document.getElementById('foodResponse');
+            if(type === 'biryani') {
+                resp.innerText = "🍛 Correct! Authentic heavy spice baseline metrics initialized.";
+                resp.className = "text-xs font-bold text-orange-400 mt-4 h-4";
+            } else if (type === 'bajji') {
+                resp.innerText = "🌶️ Approved! Local Andhra street food radar online.";
+                resp.className = "text-xs font-bold text-amber-400 mt-4 h-4";
+            } else {
+                resp.innerText = "❌ Denied. Bubble Tea tracking block tripped!";
+                resp.className = "text-xs font-bold text-red-500 mt-4 h-4";
+            }
         }
 
-        function flashBanner(text, colorClass) {
-            const banner = document.getElementById("statusBanner");
-            banner.innerText = text;
-            banner.className = `w-full max-w-4xl bg-slate-900/80 border border-slate-800 text-center text-sm font-bold p-4 rounded-xl mb-4 animate-pulse ${colorClass}`;
-        }
-
-        function showSlide() {
-            document.getElementById("photo").src = images[current];
-            document.getElementById("caption").innerText = captions[current];
-        }
-
-        function nextSlide() {
-            playAudioTone(350, 0.05);
-            current = (current + 1) % images.length;
-            showSlide();
-        }
-
-        function prevSlide() {
-            playAudioTone(350, 0.05);
-            current = (current - 1 + images.length) % images.length;
-            showSlide();
-        }
-
-        showSlide();
-
-        function chaosMode() {
-            document.body.classList.toggle("chaos-active");
-            document.getElementById("title").classList.toggle("spin-active");
-            playAudioTone(220, 0.1);
-        }
-
-        function coolMode() {
-            playAudioTone(580, 0.2);
-            flashBanner("☕ Fresh traditional coffee brewed. Brain cells momentarily rebooted!", "text-amber-400");
+        function selectCoffee(type) {
+            const resp = document.getElementById('coffeeResponse');
+            if(type === 'strong') {
+                resp.innerText = "☕ Fuel accepted. Commencing active timeline updates.";
+            } else {
+                resp.innerText = "💭 Critical: Opening 45 new scenario loops right now!";
+            }
         }
 
         function answerQuestion(isYes) {
@@ -329,17 +237,17 @@
 
             if (isYes) {
                 title.innerText = "❤️ Vibe Approved: Yapapa Cat Summoned!";
-                title.className = "text-md font-black text-emerald-400 tracking-tight text-center mb-4";
+                title.className = "text-sm font-black text-emerald-400 tracking-tight text-center mb-4";
                 video.src = "vidssave.com The Original 'Yapapa Ummm, Yapapa Haane’ New cat meme unlocked! 1080p.mp4";
             } else {
                 title.innerText = "🚨 ACCESS DENIED: CHAOS ALARM!";
-                title.className = "text-md font-black text-red-500 tracking-tight text-center mb-4";
+                title.className = "text-sm font-black text-red-500 tracking-tight text-center mb-4";
                 video.src = "vidssave.com german cat speech 240P.mp4";
             }
 
             video.currentTime = 0;
             video.load();
-            video.play().catch(e => console.log("Autoplay blocker fallback trace."));
+            video.play().catch(e => console.log("Autoplay check intercepted. Controls bound."));
         }
 
         function closeCat() {
@@ -351,40 +259,7 @@
             modal.classList.remove("flex");
         }
 
-        function analyze() {
-            playAudioTone(490, 0.08);
-            const results = [
-                "Diagnosis: Needs hot dynamic Biryani right now",
-                "Tomato Bajji dependency levels: Extremely high",
-                "Spiciness Threshold: True Andhra Scale",
-                "Junk food intake capacity: Absolute Legend",
-                "Bubble Tea avoidance status: Flawless Execution"
-            ];
-            document.getElementById("analysis").innerText = results[Math.floor(Math.random() * results.length)];
-        }
-
-        function spin() {
-            playAudioTone(600, 0.05);
-            const symbols = ["🍛", "☕", "🫣", "🌶️", "💭"];
-            let result = symbols[Math.floor(Math.random() * 5)] + " " +
-                         symbols[Math.floor(Math.random() * 5)] + " " +
-                         symbols[Math.floor(Math.random() * 5)];
-            document.getElementById("slot").innerText = result;
-        }
-
-        function excuse() {
-            playAudioTone(380, 0.1);
-            const excuses = [
-                "What if I stuttered slightly when saying thank you 3 days ago?",
-                "Are they looking at me or just looking in my general directory?",
-                "I should have ordered double tomato bajjis instead of just one.",
-                "How can I decline this phone call without moving countries?",
-                "If I go there, will there be more than 4 human beings?"
-            ];
-            document.getElementById("excuseBox").innerText = excuses[Math.floor(Math.random() * excuses.length)];
-        }
-
-        // Runaway escape button pointer movement metrics engine
+        // Runaway Button pointer matrix controls inside Slide 5 context parameters
         const btn = document.getElementById("runBtn");
         const zone = document.getElementById("complimentZone");
 
@@ -400,13 +275,12 @@
             
             const distance = Math.hypot(mouseX - btnCenterX, mouseY - btnCenterY);
             
-            if (distance < 65) {
-                playAudioTone(450, 0.03);
+            if (distance < 55) {
                 const maxW = zone.clientWidth - btnRect.width - 24;
-                const maxH = zone.clientHeight - btnRect.height - 48;
+                const maxH = zone.clientHeight - btnRect.height - 40;
                 
                 const randX = Math.max(12, Math.floor(Math.random() * maxW));
-                const randY = Math.max(12, Math.floor(Math.random() * maxH)) + 28;
+                const randY = Math.max(12, Math.floor(Math.random() * maxH)) + 20;
 
                 btn.style.left = randX + "px";
                 btn.style.top = randY + "px";
@@ -417,8 +291,8 @@
         function destroy() {
             document.body.innerHTML = `
                 <div class="flex flex-col items-center justify-center min-h-screen text-center p-6 bg-black text-orange-500 font-sans">
-                    <h1 class="text-5xl font-black tracking-tighter uppercase mb-4 animate-bounce">🚪 ISOLATION SYSTEM STABLE </h1>
-                    <h2 class="text-xl font-bold text-white max-w-xl">Lohitha successfully shut down the communications server, locked the workspace windows, and went to eat Biryani alone. Further contact drops rejected.</h2>
+                    <h1 class="text-4xl font-black tracking-tighter uppercase mb-4 animate-bounce">🚪 PRESENTATION SUSPENDED </h1>
+                    <h2 class="text-md font-bold text-white max-w-xl px-4 leading-relaxed">Lohitha successfully left the presentation loop, closed the layout deck, and went to get filter coffee alone. No further social interactions authorized.</h2>
                 </div>
             `;
         }
